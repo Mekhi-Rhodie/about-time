@@ -1,0 +1,11 @@
+#body{
+    background-color: #1e1e1e;
+}
+
+#container{
+    display: grid;
+    width: 98%;
+    height: 98%;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, minmax(200px, auto));
+}
