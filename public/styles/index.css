@@ -5,23 +5,62 @@
     margin-left: 25%;
     background-image: linear-gradient(to bottom, white, #f4f4f4);
     border-radius: 15px;
-    box-shadow: inset -3px -3px 10px #000000;
+    box-shadow: inset -3px -3px 10px #b3b3b3;
+}
+
+#signup-modal{
+    height: 445px;
 }
 
 .modal-content{
-    padding: 3%;
+    padding: 2px;
 }
 
 .modal-header{
     text-align: center;
     text-decoration: underline;
     padding-top: 0%;
+    margin-top: 0px;
+}
+
+.form-head{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+input{
+    border-radius: 7px;
+    width: 50%;
+    padding: 1.2%;
+    border: 1.5px solid #000000;
 }
 
 .form-group{
-    margin: 15px;
+    margin: 25px;
 }
 
 .form-button{
-    margin-left: 15px;
+    margin-left: 25px;
+    height: 40px;
+    width: 100px;
+    border-radius: 7px;
+    border: .5px solid #161515;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    color: silver;
+    background-image: linear-gradient(to right, #5495ff, #457ad1);
+}
+
+.form-button:active{
+    margin-left: 25px;
+    height: 40px;
+    width: 100px;
+    border-radius: 7px;
+    border: .5px solid #161515;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    color: silver;
+    background-image: linear-gradient(to right, #3e6dba, #2e528c);
 }
