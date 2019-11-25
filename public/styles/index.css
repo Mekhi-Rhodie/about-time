@@ -46,12 +46,30 @@ header{
     margin-left: 25%;
 }
 
+.header-button{
+    margin: 10px;
+}
+
 #navigation{
     grid-area: nav;
 }
 
 #main{
     grid-area: main;
+}
+
+main{
+    line-height: 40px;
+}
+
+h2{
+    font-size: 27px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#summary{
+    margin-left: 50px;
 }
 
 #footer{
