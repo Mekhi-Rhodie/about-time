@@ -4,13 +4,17 @@
     height: 350px;
     border: 2px solid black;
     margin-left: 25%;
-    background-image: linear-gradient(to bottom, white, #f4f4f4);
+    background-image: linear-gradient(to right, #fcfcfc,whitesmoke, #e3e3e3, #c4c4c4);
     border-radius: 15px;
-    box-shadow: inset -3px -3px 10px #b3b3b3;
+    box-shadow: inset -3px -3px 10px #565656;
 }
 
 #signup-modal{
     height: 445px;
+}
+
+#login-modal{
+    position: absolute;
 }
 
 .modal-content{
