@@ -6,7 +6,7 @@
     display: grid;
     width: 100%;
     height: 100%;
-    gap: 34px;
+    gap: 30px;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(4, minmax(50px, auto));
     grid-template-areas: 
@@ -82,21 +82,25 @@ li{
     background-image: linear-gradient(to bottom, #161515, #424242);
     border: 1px solid#3fffb2;
     box-shadow: 10px 15px 10px #000000;
+    color: silver;
 }
 
 main{
-    line-height: 40px;
+    line-height: 50px;
+    padding: 20px;
 }
 
 h2{
     font-size: 32px;
     font-weight: bold;
     text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #summary{
     margin-left: 50px;
     font-size: 20px;
+    padding: 15px;
 }
 
 #footer{
@@ -120,7 +124,6 @@ button{
 }
 
 button:active{
-    margin-left: 25px;
     height: 40px;
     width: 100px;
     border-radius: 7px;
