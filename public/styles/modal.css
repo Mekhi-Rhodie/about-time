@@ -46,3 +46,27 @@ input{
 .form-group{
     margin: 25px;
 }
+
+button.close{
+    color: crimson;
+    font-weight: bold;
+    font-size: 20px;
+    float: left;
+    margin-top: 0px;
+    margin-left: 10px;
+    padding: 0%;
+    height: 0px;
+    width: 0px;
+}
+
+button.close:active{
+    color: #b20b0b;
+    font-weight: bold;
+    font-size: 20px;
+    float: left;
+    margin-top: 0px;
+    margin-left: 10px;
+    padding: 0%;
+    height: 0px;
+    width: 0px;
+}
