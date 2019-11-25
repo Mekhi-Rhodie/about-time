@@ -1,0 +1,24 @@
+.modal{
+    width: 50%;
+    height: 350px;
+    border: 2px solid black;
+    margin-left: 25%;
+}
+
+.modal-content{
+    padding: 3%;
+}
+
+.modal-header{
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 0%;
+}
+
+.form-group{
+    margin: 15px;
+}
+
+.form-button{
+    margin-left: 15px;
+}

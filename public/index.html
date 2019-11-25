@@ -8,7 +8,7 @@
     <meta name="author" content="Mekhi">
     <meta name="keywords" content="About-Time, Time">
     <meta name="description" content="This is the home page of the About-Time web application.">
-    <link rel="stylesheet" href="/public/styles/index.css">
+    <link rel="stylesheet" href="styles/index.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </head>
@@ -83,7 +83,7 @@
                 </p>
             </main>
         </div>
-        <div id="login-modal">
+        <div class="modal" id="login-modal">
             <div class="modal-content">
                 <h1 class="modal-header">Login:</h1>
                 <form>
@@ -97,11 +97,11 @@
                         <br>
                         <input type="password" id="login-password" name="login-password" minlength="10" maxlength="20" placeholder="Password">
                     </div>
-                    <button id="login" type="submit">Login!</button>
+                    <button class="form-button" id="login" type="submit">Login!</button>
                 </form>
             </div>
         </div>
-        <div id="signup-modal">
+        <div class="modal" id="signup-modal">
                 <div class="modal-content">
                     <h1 class="modal-header">Sign Up:</h1>
                     <form>
@@ -120,7 +120,7 @@
                                 <br>
                                 <input type="text" id="email" name="email" placeholder="Username">
                             </div>
-                        <button id="login" type="submit">Sign Up!</button>
+                        <button class="form-button" id="login" type="submit">Sign Up!</button>
                     </form>
                 </div>
             </div>
@@ -134,7 +134,7 @@
         </div>
     </div>
 </body>
-<script src="/public/scripts/index.js"></script>
+<script src="scripts/index.js"></script>
 <noscript>You will need to enable javascript to use this application.</noscript>
 
 </html>
