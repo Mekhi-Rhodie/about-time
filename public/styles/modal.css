@@ -10,10 +10,13 @@
 }
 
 #signup-modal{
+    margin-top: 25px;
     height: 445px;
+    position: absolute;
 }
 
 #login-modal{
+    margin-top: 25px;
     position: absolute;
 }
 
