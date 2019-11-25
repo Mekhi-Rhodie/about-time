@@ -18,13 +18,17 @@
     <div id="container">
         <div id="header">
             <header>
-                <iframe scrolling="no" frameborder="no" clocktype="html5"
-                    style="overflow:hidden;border:0;margin:0;padding:0;width:150px;height:150px;"
-                    src="https://www.clocklink.com/html5embed.php?clock=041&timezone=EST&color=purple&size=150&Title=&Message=&Target=&From=2019,1,1,0,0,0&Color=purple"></iframe>
-                <h1>About-Time</h1>
-                <div>
-                    <button id="login" type="button">Login</button>
-                    <button id="signup" type="button">Sign Up</button>
+                <div id="header-img">
+                    <iframe scrolling="no" frameborder="no" clocktype="html5"
+                        style="overflow:hidden;border:0;margin:0;padding:0;width:150px;height:150px;"
+                        src="https://www.clocklink.com/html5embed.php?clock=041&timezone=EST&color=purple&size=150&Title=&Message=&Target=&From=2019,1,1,0,0,0&Color=purple"></iframe>
+                </div>
+                <div id="header-title">
+                    <h1>About-Time</h1>
+                </div>
+                <div id="header-buttons">
+                    <button id="log-in" type="button">Login</button>
+                    <button id="sign-up" type="button">Sign Up</button>
                 </div>
             </header>
         </div>
@@ -91,40 +95,44 @@
                     <div class="form-group">
                         <label class="form-head" for="login-username">Username:</label>
                         <br>
-                        <input type="text" id="login-username" name="login-username" minlength="4" maxlength="15" placeholder="Username">
+                        <input type="text" id="login-username" name="login-username" minlength="4" maxlength="15"
+                            placeholder="Username">
                     </div>
                     <div class="form-group">
                         <label class="form-head" for="login-password">Password:</label>
                         <br>
-                        <input type="password" id="login-password" name="login-password" minlength="10" maxlength="20" placeholder="Password">
+                        <input type="password" id="login-password" name="login-password" minlength="10" maxlength="20"
+                            placeholder="Password">
                     </div>
                     <button class="form-button" id="login" type="submit">Login</button>
                 </form>
             </div>
         </div>
         <div class="modal" id="signup-modal">
-                <div class="modal-content">
-                    <h1 class="modal-header">Sign Up:</h1>
-                    <form>
-                        <div class="form-group">
-                            <label class="form-head" for="username">Username:</label>
-                            <br>
-                            <input type="text" id="username" name="username" minlength="4" maxlength="15" placeholder="Username...">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-head" for="password">Password:</label>
-                            <br>
-                            <input type="password" id="password" name="password" minlength="10" maxlength="20" placeholder="Password...">
-                        </div>
-                        <div class="form-group">
-                                <label class="form-head" for="email">E-mail:</label>
-                                <br>
-                                <input type="text" id="email" name="email" placeholder="Username">
-                            </div>
-                        <button class="form-button" id="signup" type="submit">Sign Up</button>
-                    </form>
-                </div>
+            <div class="modal-content">
+                <h1 class="modal-header">Sign Up:</h1>
+                <form>
+                    <div class="form-group">
+                        <label class="form-head" for="username">Username:</label>
+                        <br>
+                        <input type="text" id="username" name="username" minlength="4" maxlength="15"
+                            placeholder="Username...">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-head" for="password">Password:</label>
+                        <br>
+                        <input type="password" id="password" name="password" minlength="10" maxlength="20"
+                            placeholder="Password...">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-head" for="email">E-mail:</label>
+                        <br>
+                        <input type="text" id="email" name="email" placeholder="Username">
+                    </div>
+                    <button class="form-button" id="signup" type="submit">Sign Up</button>
+                </form>
             </div>
+        </div>
         <div id="footer">
             <footer>
                 <p id="footer-header">Footer</p>
