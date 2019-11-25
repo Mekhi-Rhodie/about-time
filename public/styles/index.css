@@ -6,9 +6,9 @@
     display: grid;
     width: 98%;
     height: 98%;
-    gap: 12px;
+    gap: 25px;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(4, minmax(200px, auto));
+    grid-template-rows: repeat(4, minmax(50px, auto));
     grid-template-areas: 
     "nav header header header header header header header header header"
     "nav main main main main main main main main main"
@@ -24,12 +24,13 @@
 header{
     display: grid;
     grid-template-columns: .5fr 2fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: minmax(20px, auto);
     padding: 1px;
 }
 
 #header-img{
     grid-column: 1/2;
+    margin-top: 25%;
 }
 
 #header-title{
@@ -42,12 +43,12 @@ header{
 
 #header-buttons{
     grid-column: 3/4;
-    margin-top: 40%;
+    margin-top: 25%;
     margin-left: 25%;
 }
 
 .header-button{
-    margin: 10px;
+    margin: 3px;
 }
 
 #navigation{
@@ -56,14 +57,17 @@ header{
 
 ul{
    list-style: none;
+   padding-left: 0px;
 }
 
 a{
     text-decoration: none;
+    color: silver;
+    font-size: 15px;
 }
 
 li{
-    margin: 10px;
+    margin: 25px 0px 10px 0px;
 }
 
 #main{
@@ -87,4 +91,30 @@ h2{
 
 #footer{
     grid-area: footer;
+}
+
+button{
+    margin-left: 25px;
+    height: 40px;
+    width: 100px;
+    border-radius: 7px;
+    border: .5px solid #161515;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    color: silver;
+    background-image: linear-gradient(to right, #d075ff, #8243a3);
+}
+
+button:active{
+    margin-left: 25px;
+    height: 40px;
+    width: 100px;
+    border-radius: 7px;
+    border: .5px solid #161515;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    color: silver;
+    background-image: linear-gradient(to right, #8243a4, #4b265d);
 }
