@@ -5,4 +5,7 @@ $(document).ready(function(){
     $("#sign-up").on("click", function(event){
         $("#signup-modal").slideDown(580).css("display","block")
     });
+    $(".close").on("click", function(event){
+        $("#signup-modal, #login-modal").slideUp(700)
+    });
 }); 
