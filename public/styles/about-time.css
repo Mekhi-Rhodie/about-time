@@ -1,0 +1,159 @@
+#body {
+    background-color: #1e1e1e;
+}
+
+#container {
+    display: grid;
+    gap: 30px;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(7, minmax(20px, auto));
+    grid-template-areas: "nav header header header header header header header header header" "nav converter converter converter converter converter converter converter converter converter" "nav tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference" "nav clock clock clock clock clock clock clock clock clock" "nav timer timer timer timer timer timer timer timer timer" "nav stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch" "nav events events events events events events events events events";
+}
+
+#header {
+    grid-area: header;
+    background-image: linear-gradient(to bottom, #161515, #424242);
+    border: 1px solid#3fffb2;
+    box-shadow: 10px 15px 10px #000000;
+    border-radius: 5px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: .5fr 2fr;
+    grid-template-rows: minmax(20px, auto);
+    padding: 0px;
+}
+
+#header-img {
+    grid-column: 1/2;
+    margin-top: 25%;
+    margin-left: 10px;
+    padding: 0%;
+}
+
+#header-title {
+    grid-column: 2/3;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    padding: 0%;
+    text-shadow: 3px 3px 7px #23ffc8;
+}
+
+#navigation {
+    grid-area: nav;
+    background-image: linear-gradient(to bottom, #161515, #424242);
+    border: 1px solid#3fffb2;
+    box-shadow: 10px 15px 10px #000000;
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: silver;
+    font-size: 15px;
+}
+
+li {
+    margin: 25px 0px 10px 25px;
+}
+
+.function{
+    background-image: linear-gradient(to bottom, #161515, #424242);
+    border: 1px solid#3fffb2;
+    box-shadow: 10px 15px 10px #000000;
+    color: silver;
+    border-radius: 5px;
+}
+
+.form-head{
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 1.5px 1px 1px #3fffb2;
+}
+
+.form-group{
+    margin: 10px 0px 40px 0px;
+}
+
+#time-converter {
+    grid-area: converter;
+    padding: 2%;
+}
+
+input{
+    border-radius: 7px;
+    width: 45%;
+    padding: 5px;
+    border: 1.5px solid #000000;
+    font-size: 35px;
+    text-align: center;
+}
+
+textarea{
+    width: 35%;
+    font-size: 20px;
+    border: 1.5px solid #000000;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #000000;
+}
+
+#time-difference {
+    grid-area: tDifference;
+    padding: 2%;
+}
+
+
+
+#world-clock {
+    grid-area: clock;
+    padding: 3%;
+}
+
+#timer {
+    grid-area: timer;
+    padding: 3%;
+}
+
+#stop-watch {
+    grid-area: stopwatch;
+    padding: 3%;
+}
+
+#events {
+    grid-area: events;
+    padding: 2%;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    border-radius: 7px;
+    border: .5px solid #161515;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    color: silver;
+    background-image: linear-gradient(to right, #d075ff, #8243a3);
+}
+
+button:active {
+    height: 40px;
+    width: 100px;
+    border-radius: 7px;
+    border: .5px solid #161515;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    color: silver;
+    background-image: linear-gradient(to right, #8243a4, #4b265d);
+}
