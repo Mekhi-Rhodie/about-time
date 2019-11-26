@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>About Time | App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="Mekhi">
+    <meta name="keywords" content="About-Time, Time">
+    <meta name="description" content="This is the home page of the About-Time web application.">
+    <link rel="stylesheet" href="styles/about-time.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <div id="container">
+        <div id="header">
+            <header>
+                <div id="header-img">
+                    <iframe scrolling="no" frameborder="no" clocktype="html5"
+                        style="overflow:hidden;border:0;margin:0;padding:0;width:150px;height:150px;"
+                        src="https://www.clocklink.com/html5embed.php?clock=041&timezone=EST&color=purple&size=150&Title=&Message=&Target=&From=2019,1,1,0,0,0&Color=purple"></iframe>
+                </div>
+                <div id="header-title">
+                    <h1>About-Time</h1>
+                </div>
+            </header>
+        </div>
+        <div id="navigation">
+            <nav>
+                <ul>
+                    <li>
+                        <button id="">
+                            <a href="#">Time Converter</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="">
+                            <a href="#">Time Difference</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="">
+                            <a href="#">World Clocks</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="">
+                            <a href="#">Timer</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="">
+                            <a href="#">Stop Watch</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="">
+                            <a href="#">Events</a>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="function" id="time-converter">
+            <div class="main">
+                <form>
+                    <label for="time-select">Time:</label>
+                    <br>
+                    <select name="time" id="time-select">
+                        <option value="">--Please choose a time standard--</option>
+                        <option value="12-Hour Time">12-Hour Time</option>
+                        <option value="24-Hour Time">24-Hour Time</option>
+                    </select>
+                    <br>
+                    <input type="text" id="time" name="time" minlength="5" maxlength="5" placeholder="00:00">
+                    <br>
+                    <button type="submit">Enter</button>
+                    <output id="converter-output"></output>
+                </form>
+            </div>
+        </div>
+        <div class="function">
+            <div class="main" id="time-difference">
+
+            </div>
+        </div>
+        <div class="function">
+            <div class="main" id="world-clock">
+
+            </div>
+        </div>
+        <div class="function">
+            <div class="main" id="timer">
+
+            </div>
+        </div>
+        <div class="function">
+            <div class="main" id="stop-watch">
+
+            </div>
+        </div>
+        <div class="function">
+            <div class="main" id="events">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="scripts/about-time.js"></script>
+<noscript>You will need to enable javascript to use this application.</noscript>
+
+</html>
