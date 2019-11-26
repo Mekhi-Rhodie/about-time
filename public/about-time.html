@@ -83,7 +83,7 @@
         </div>
         <div class="function">
             <div class="main" id="time-difference">
-                <form>  
+                <form>
                     <div class="form-group" id="sTime">
                         <label class="form-head" for="start-time">Start Time:</label>
                         <br>
@@ -94,7 +94,7 @@
                         <br>
                         <input type="time" name="end-time" id="end-time">
                     </div>
-                    <button type="submit">Enter</button> 
+                    <button type="submit">Enter</button>
                     <div class="form-group" id="dOutput">
                         <label class="form-head" for="difference-output">Time:</label>
                         <output id="difference-output"></output>
@@ -106,8 +106,9 @@
             <div class="main" id="world-clock">
                 <h2>World-Clocks!</h2>
                 <form>
-                  <input type="search" name="clock-search" id="clock-search" placeholder="Search..." minlength="3" maxlength="15">
-                  <button type="submit">Search</button>  
+                    <input type="search" name="clock-search" id="clock-search" placeholder="Search..." minlength="3"
+                        maxlength="15">
+                    <button type="submit">Search</button>
                 </form>
                 <div id="favorite-clock">
                     <div class="clock-attr">
@@ -135,17 +136,62 @@
         </div>
         <div class="function">
             <div class="main" id="timer">
+                <form>
+                    <div id="control-buttons">
+                    <button id="start">Start</button>
+                    <button id="pause">Pause</button>
+                    <button type="reset" id="reset">Reset</button>
+                </div>
+                <div id="time-input">
+                    <div id="timer-display">
 
+                    </div>
+                </div>
+                <div id="preset-buttons">
+                    <button class="secondary-button" value="5" id="five-min">5 Min</button>
+                    <button class="secondary-button" value="10" id="ten-min">10 Min</button>
+                    <button class="secondary-button" value="15" id="fifteen-min">15 Min</button>
+                    <button class="secondary-button" value="20" id="twenty-min">20 Min</button>
+                </div>
+                </form>
             </div>
         </div>
         <div class="function">
             <div class="main" id="stop-watch">
+                <form>
+<div id="sWatch-controls">
+                    <button id="start2">Start</button>
+                    <button id="stop">Stop</button>
+                    <button id="lap">Lap</button>
+                    <button type="reset">Reset</button>
+                </div>
+                <div id="stopWatch">
 
+                </div>
+                <div id="lap-times">
+                    
+                </div>
+                </form>
             </div>
         </div>
         <div class="function">
             <div class="main" id="events">
-
+                <form>
+                    <div class="form-group">
+                        <label class="form-head" for="event">Event:</label>
+                    <br>
+                    <textarea id="event" name="event" placeholder="Please Enter a short description of event..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-head" for="event-date">Please enter date:</label>
+                        <br>
+                        <input type="date" name="event-date" id="event-date">
+                    </div>
+                    <div class="form-group">
+                        <output name="event-output" id="event-output"></output>
+                    </div>
+                    <button type="submit" id="event-submit">Submit</button>
+                </form>
             </div>
         </div>
     </div>
