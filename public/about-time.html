@@ -77,7 +77,7 @@
                     </div>
                     <br>
                     <div class="form-group">
-                        <input type="text" id="time" name="time" minlength="5" maxlength="5" placeholder="00:00">
+                        <input type="time" id="time" name="time" placeholder="00:00">
                     </div>
                     <br>
                     <button type="submit">Enter</button>
@@ -107,10 +107,10 @@
                 <form>
                     <div class="form-group" id="search-form">
                         <input type="search" name="clock-search" id="clock-search" placeholder="Search..." minlength="3"
-                        maxlength="15">
-                    <button id="search-button" type="submit">Search</button>
+                            maxlength="15">
+                        <button id="search-button" type="submit">Search</button>
                     </div>
-                    
+
                 </form>
                 <div id="favorite-clock">
                     <div class="clock-attr">
@@ -162,15 +162,18 @@
         <div class="function" id="stop-watch">
             <div class="main">
                 <form>
-                    <div id="sWatch-controls">
-                        <button id="start2">Start</button>
-                        <button id="stop">Stop</button>
-                        <button id="lap">Lap</button>
-                        <button type="reset">Reset</button>
-                    </div>
-                    <div id="stopWatch">
+                    <div id="stop-watch-grid">
+                        <div id="sWatch-controls">
+                            <button id="start2">Start</button>
+                            <button id="stop">Stop</button>
+                            <button id="lap">Lap</button>
+                            <button type="reset">Reset</button>
+                        </div>
+                        <div id="stopWatch">
 
+                        </div>
                     </div>
+                    <hr>
                     <div id="lap-times">
 
                     </div>
