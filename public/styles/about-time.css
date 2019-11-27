@@ -104,10 +104,14 @@ select{
 input{
     border-radius: 7px;
     width: 45%;
-    padding: 5px;
+    padding: 0px;
     border: 1.5px solid #000000;
     font-size: 35px;
     text-align: center;
+}
+
+#dOutput{
+    margin-top: 50px;
 }
 
 textarea{
@@ -123,16 +127,63 @@ textarea{
     padding: 2%;
 }
 
-
-
 #world-clock {
     grid-area: clock;
     padding: 3%;
 }
 
+#search-form{
+    margin-left: 27%;
+    width: 100%;
+}
+
+#clock-search{
+    text-align: left;
+}
+
+h2{
+    margin-left: 42%;
+    margin-top: 0px;
+}
+
 #timer {
     grid-area: timer;
     padding: 3%;
+}
+
+#timer-form{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "cButtons display preset"
+    ;
+}
+
+#control-buttons{
+    grid-area: cButtons;
+    display: block;
+    margin-left: 285px;
+}
+
+.control-buttons{
+    margin: 10px 30px 5px 0px;
+    display: block;
+}
+
+#time-input{
+    grid-area: display;
+    background-color: whitesmoke;
+}
+
+#preset-buttons{
+    grid-area: preset;
+    display: block;
+}
+
+.secondary-button{
+    margin: 10px 0px 5px 30px;
+    display: block;
 }
 
 #stop-watch {
