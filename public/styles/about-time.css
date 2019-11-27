@@ -191,6 +191,47 @@ h2{
     padding: 3%;
 }
 
+#stop-watch-grid{
+    display: grid;
+    gap: 7px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "sWatch stop-watch"
+    ;
+}
+
+#sWatch-controls{
+    grid-area: sWatch;
+    display: grid;
+    gap: 35px;
+    grid-template-columns: repeat(2,minmax(5px, auto));
+    grid-template-rows: repeat(2,minmax(5px, auto));
+    grid-template-areas: 
+    "start2 lap"
+    "stop reset"
+    ;
+}
+
+#stopWatch{
+    grid-area: stop-watch;
+}
+
+#stop{
+    grid-area: stop;
+}
+
+#lap{
+    grid-area: lap;
+}
+
+#start2{
+    grid-area: start2;
+}
+
+#reset{
+    grid-area: reset;
+}
+
 #events {
     grid-area: events;
     padding: 2%;
