@@ -70,7 +70,7 @@
                         <label class="form-head" for="time-select">Time:</label>
                         <br>
                         <select name="time" id="time-select">
-                            <option value="">--Please choose a time standard--</option>
+                            <option value="">--Please choose a format--</option>
                             <option value="12-Hour Time">12-Hour Time</option>
                             <option value="24-Hour Time">24-Hour Time</option>
                         </select>
@@ -81,7 +81,6 @@
                     </div>
                     <br>
                     <button type="submit">Enter</button>
-                    <output id="converter-output"></output>
                 </form>
             </div>
         </div>
@@ -99,10 +98,6 @@
                         <input type="time" name="end-time" id="end-time">
                     </div>
                     <button type="submit">Enter</button>
-                    <div class="form-group" id="dOutput">
-                        <label class="form-head" for="difference-output">Time:</label>
-                        <output id="difference-output"></output>
-                    </div>
                 </form>
             </div>
         </div>
@@ -110,9 +105,12 @@
             <div class="main">
                 <h2 class="form-head">World-Clocks!</h2>
                 <form>
-                    <input type="search" name="clock-search" id="clock-search" placeholder="Search..." minlength="3"
+                    <div class="form-group" id="search-form">
+                        <input type="search" name="clock-search" id="clock-search" placeholder="Search..." minlength="3"
                         maxlength="15">
-                    <button type="submit">Search</button>
+                    <button id="search-button" type="submit">Search</button>
+                    </div>
+                    
                 </form>
                 <div id="favorite-clock">
                     <div class="clock-attr">
@@ -125,6 +123,7 @@
 
                     </div>
                 </div>
+                <hr>
                 <div id="searched-clocks">
                     <div class="clock-attr">
 
@@ -140,11 +139,11 @@
         </div>
         <div class="function" id="timer">
             <div class="main">
-                <form>
+                <form id="timer-form">
                     <div id="control-buttons">
-                        <button id="start">Start</button>
-                        <button id="pause">Pause</button>
-                        <button type="reset" id="reset">Reset</button>
+                        <button class="control-buttons" id="start">Start</button>
+                        <button class="control-buttons" id="pause">Pause</button>
+                        <button class="control-buttons" type="reset" id="reset">Reset</button>
                     </div>
                     <div id="time-input">
                         <div id="timer-display">
@@ -185,7 +184,7 @@
                         <label class="form-head" for="event-description">Event:</label>
                         <br>
                         <textarea id="event-description" name="event-description" minlength="10" maxlength="255"
-                            cols="45" rows="5" placeholder="Please Enter a short description of event..."></textarea>
+                            cols="45" rows="5" placeholder="Please enter a short description of event..."></textarea>
                     </div>
                     <div class="form-group">
                         <label class="form-head" for="event-date">Please enter date:</label>
