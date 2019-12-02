@@ -32,11 +32,6 @@
                 <ul>
                     <li>
                         <button id="">
-                            <a href="#time-converter">Time Converter</a>
-                        </button>
-                    </li>
-                    <li>
-                        <button id="">
                             <a href="#time-difference">Time Difference</a>
                         </button>
                     </li>
@@ -63,27 +58,6 @@
                 </ul>
             </nav>
         </div>
-        <div class="function" id="time-converter">
-            <div class="main">
-                <form>
-                    <div>
-                        <label class="form-head" for="time-select">Time:</label>
-                        <br>
-                        <select name="time-select" id="time-select">
-                            <option value="">--Please choose a format--</option>
-                            <option value="12-Hour Time">12-Hour Time</option>
-                            <option value="24-Hour Time">24-Hour Time</option>
-                        </select>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <input type="text" id="time" name="time" minlength="4" maxlength="5" placeholder="00:00">
-                    </div>
-                    <br>
-                    <button id="time-submit" type="submit">Enter</button>
-                </form>
-            </div>
-        </div>
         <div class="function" id="time-difference">
             <div class="main">
                 <form>
@@ -96,6 +70,9 @@
                         <label class="form-head" for="end-time">End Time:</label>
                         <br>
                         <input type="time" name="end-time" id="end-time">
+                    </div>
+                    <div class="form-group" id="diff-output">
+                        <output id="difference"></output>
                     </div>
                     <button id="new-time" type="submit">Enter</button>
                 </form>
@@ -180,13 +157,22 @@
                 </div>
                 <hr>
                 <div id="searched-clocks">
-                    <div class="clock-attr">
+                    <div id="city-state">
 
                     </div>
-                    <div class="clock-attr">
+                    <div id="region-time">
 
                     </div>
-                    <div class="clock-attr">
+                    <div id="date">
+
+                    </div>
+                    <div class="mini-data" id="time-diff">
+
+                    </div>
+                    <div class="mini-data" id="gmt">
+
+                    </div>
+                    <div class="mini-data" id="time-zone">
 
                     </div>
                 </div>

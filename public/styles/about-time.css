@@ -8,8 +8,8 @@
     height: 100%;
     width: 100%;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(7, minmax(20px, auto));
-    grid-template-areas: "nav header header header header header header header header header" "nav converter converter converter converter converter converter converter converter converter" "nav tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference" "nav clock clock clock clock clock clock clock clock clock" "nav timer timer timer timer timer timer timer timer timer" "nav stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch" "nav events events events events events events events events events";
+    grid-template-rows: repeat(6, minmax(20px, auto));
+    grid-template-areas: "nav header header header header header header header header header" "nav tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference" "nav clock clock clock clock clock clock clock clock clock" "nav timer timer timer timer timer timer timer timer timer" "nav stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch" "nav events events events events events events events events events";
 }
 
 #header {
@@ -85,11 +85,6 @@ li {
 
 .form-group{
     margin: 10px 0px 40px 0px;
-}
-
-#time-converter {
-    grid-area: converter;
-    padding: 2%;
 }
 
 select{
