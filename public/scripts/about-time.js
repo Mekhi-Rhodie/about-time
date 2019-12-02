@@ -5,7 +5,9 @@ $(document).ready(function () {
         const endTime = $("#end-time").val().trim();
         const eTime = moment(endTime, "hh:mma").format("hh:mma");
         const sTime = moment(startTime, "hh:mma").format("hh:mma");
-        console.log(eTime + sTime)
+        const difference = moment.utc(moment(sTime, "h:mma").diff(moment(eTime, "h:mma"))).format("h:mm");
+        console.log(difference);
+        $("#difference").empty().append(difference)
     });
     $("#search-button").on("click", function (event) {
         event.preventDefault()
@@ -21,10 +23,11 @@ $(document).ready(function () {
             const regionDate = moment(regionTimeDate).format("DD-MM-YYYY");
             const timeZone = response.zones[0].abbreviation;
             const gmt = response.zones[0].gmtOffset;
-            const currentTime = moment().format("h:mm")
-            const timeDiff = moment.utc(moment(currentTime, "h:mma").diff(moment(regionTime, "h:mma"))).format("h")
+            const currentTime = moment().format("h:mm");
+            const timeDiff = moment.utc(moment(currentTime, "h:mma").diff(moment(regionTime, "h:mma"))).format("h");
+            const cityState =  search + ", " + region;
+//<------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
-            
             console.log(regionDate);
             console.log(regionTime);
             console.log(timeZone);
@@ -33,7 +36,16 @@ $(document).ready(function () {
             console.log(region);
             console.log(timeDiff);
             console.log(currentTime);
-            //console.log(response);
+            console.log(cityState);
+//<------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+            $("#city-state").empty().prepend(cityState);
+            $("#region-time").empty().prepend(regionTime);
+            $("#date").empty().prepend(regionDate);
+            $("#time-diff").empty().prepend(timeDiff);
+            $("#gmt").empty().append(gmt);
+            $("#time-zone").empty().prepend(timeZone);
+            //Add switch statement to print out full time zone phrase base on abbreveation.
         });
     });
 }); 
