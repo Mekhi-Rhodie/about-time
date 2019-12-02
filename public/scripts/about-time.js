@@ -16,7 +16,18 @@ $(document).ready(function () {
             url: URL,
             method: "GET"
         }).then(function (response) {
-            console.log(response)
+            const regionTimeDate = response.zones[0].formatted;
+            const regionTime = moment(regionTimeDate).format("h:mm");
+            const regionDate = moment(regionTimeDate).format("DD-MM-YYYY");
+            const timeZone = response.zones[0].abbreviation;
+            const gmt = response.zones[0].gmtOffset;
+            console.log(regionDate);
+            console.log(regionTime);
+            console.log(timeZone);
+            console.log(gmt);
+            console.log(search);
+            console.log(region);
+            //console.log(response);
         });
     });
 }); 
