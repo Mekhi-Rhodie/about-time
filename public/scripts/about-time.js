@@ -21,12 +21,18 @@ $(document).ready(function () {
             const regionDate = moment(regionTimeDate).format("DD-MM-YYYY");
             const timeZone = response.zones[0].abbreviation;
             const gmt = response.zones[0].gmtOffset;
+            const currentTime = moment().format("h:mm")
+            const timeDiff = moment.utc(moment(currentTime, "h:mma").diff(moment(regionTime, "h:mma"))).format("h")
+
+            
             console.log(regionDate);
             console.log(regionTime);
             console.log(timeZone);
             console.log(gmt);
             console.log(search);
             console.log(region);
+            console.log(timeDiff);
+            console.log(currentTime);
             //console.log(response);
         });
     });
