@@ -58,4 +58,5 @@ $(document).ready(function () {
         console.log(eventDate);
         console.log(eventTime);
     }); 
+    
 }); 
