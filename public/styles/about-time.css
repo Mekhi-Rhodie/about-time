@@ -146,31 +146,6 @@ h2{
     padding: 3%;
 }
 
-#timer-form{
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: 
-    "cButtons display preset"
-    ;
-}
-
-#control-buttons{
-    grid-area: cButtons;
-    display: block;
-    margin-left: 285px;
-}
-
-.control-buttons{
-    margin: 10px 30px 5px 0px;
-    display: block;
-}
-
-#time-input{
-    grid-area: display;
-    background-color: whitesmoke;
-}
-
 #preset-buttons{
     grid-area: preset;
     display: block;
