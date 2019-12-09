@@ -58,5 +58,13 @@ $(document).ready(function () {
         console.log(eventDate);
         console.log(eventTime);
     }); 
-    
+    $("#unit-convert").on("click",function(event){
+        event.preventDefault();
+        const x = $("#unit-select1").val();
+        const y = $("#unit-select2").val();
+        const value = $("#unit-value").val().trim();
+        console.log(x)
+        console.log(y)
+        console.log(value)
+    });
 }); 
