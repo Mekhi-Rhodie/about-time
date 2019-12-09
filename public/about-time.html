@@ -62,7 +62,7 @@
             </nav>
         </div>
         <div class="function" id="time-difference">
-            <div class="main">
+            <div id="diff-input" class="main">
                 <form>
                     <div class="form-group" id="sTime">
                         <label class="form-head" for="start-time">Start Time:</label>
@@ -74,11 +74,13 @@
                         <br>
                         <input type="time" name="end-time" id="end-time">
                     </div>
-                    <div class="form-group" id="diff-output">
-                        <output id="difference"></output>
-                    </div>
                     <button id="new-time" type="submit">Enter</button>
                 </form>
+            </div>
+            <div id="diff-output">
+                <div class="form-group" id="diff-output">
+                    <output id="difference"></output>
+                </div>
             </div>
         </div>
         <div class="function" id="world-clock">
