@@ -5,7 +5,7 @@ $(document).ready(function () {
         const endTime = $("#end-time").val().trim();
         const eTime = moment(endTime, "hh:mma").format("hh:mma");
         const sTime = moment(startTime, "hh:mma").format("hh:mma");
-        const difference = moment.utc(moment(sTime, "h:mma").diff(moment(eTime, "h:mma"))).format("h:mm");
+        const difference = moment.utc(moment(sTime, "h:mma").diff(moment(eTime, "h:mma"))).format("h");
         console.log(difference);
         $("#difference").empty().append(difference)
     });
@@ -43,8 +43,8 @@ $(document).ready(function () {
             $("#region-time").empty().prepend(regionTime);
             $("#date").empty().prepend(regionDate);
             $("#time-diff").empty().prepend(timeDiff);
-            $("#gmt").empty().append("GMT: " + gmt);
-            $("#time-zone").empty().prepend(timeZone);
+            $("#gmt").empty().append("<strong>"+ "GMT: "+"</strong>" + gmt);
+            $("#time-zone").empty().prepend("<strong>"+ timeZone)+"</strong>";
             //Add switch statement to print out full time zone phrase base on abbreveation.
         });
     });
