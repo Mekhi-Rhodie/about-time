@@ -34,29 +34,29 @@
             <nav>
                 <ul>
                     <li>
-                        <button id="">
+                       
                             <a href="#time-difference">Time Difference</a>
-                        </button>
+                        
                     </li>
                     <li>
-                        <button id="">
+                        
                             <a href="#world-clock">World Clocks</a>
-                        </button>
+                       
                     </li>
                     <li>
-                        <button id="">
+                        
                             <a href="#timer">Timer</a>
-                        </button>
+                        
                     </li>
                     <li>
-                        <button id="">
+                        
                             <a href="#stop-watch">Stop Watch</a>
-                        </button>
+                        
                     </li>
                     <li>
-                        <button id="">
+                        
                             <a href="#events">Events</a>
-                        </button>
+                        
                     </li>
                 </ul>
             </nav>
@@ -185,36 +185,52 @@
             <div class="main">
                 <form id="timer-form">
                     <div id="form-group">
-                        <label class="form-head" for="dob">Date of Birth:</label>
+                        <label class="form-head" for="unit-select1">Unit:</label>
                         <br>
-                        <input type="date" id="dob" name="dob">
-                        <!--<input type="time" id="tob" name="tob">-->
-                        <button id="age-calc" type="submit">Calculate</button>
+                        <select name="pets" id="unit-select1">
+                            <option value=""></option>
+                            <option value="Millennium">Millennium</option>
+                            <option value="Century">Century</option>
+                            <option value="Decade">Decade</option>
+                            <option value="Year">Year</option>
+                            <option value="Month">Month</option>
+                            <option value="Week">Week</option>
+                            <option value="Day">Day</option>
+                            <option value="Hour">Hour</option>
+                            <option value="Minute">Minute</option>
+                            <option value="Second">Second</option>
+                            <option value="Millisecond">Millisecond</option>
+                        </select>
                     </div>
+                    <p>to:</p>
+                    <div id="form-group">
+                        <label class="form-head" for="unit-select2">Unit:</label>
+                        <br>
+                        <select name="pets" id="unit-select2">
+                            <option value=""></option>
+                            <option value="Millennium">Millennium</option>
+                            <option value="Century">Century</option>
+                            <option value="Decade">Decade</option>
+                            <option value="Year">Year</option>
+                            <option value="Month">Month</option>
+                            <option value="Week">Week</option>
+                            <option value="Day">Day</option>
+                            <option value="Hour">Hour</option>
+                            <option value="Minute">Minute</option>
+                            <option value="Second">Second</option>
+                            <option value="Millisecond">Millisecond</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-head" for="">Value:</label>
+                        <br>
+                        <input type="text" id="unit-value" name="unit-value">
+                    </div>
+                    <button type="submit" id="unit-convert">Convert</button>
                 </form>
             </div>
         </div>
-        <div class="function" id="stop-watch">
-            <div class="main">
-                <form>
-                    <div id="stop-watch-grid">
-                        <div id="sWatch-controls">
-                            <button id="start2">Start</button>
-                            <button id="stop">Stop</button>
-                            <button id="lap">Lap</button>
-                            <button type="reset">Reset</button>
-                        </div>
-                        <div id="stopWatch">
-
-                        </div>
-                    </div>
-                    <hr>
-                    <div id="lap-times">
-
-                    </div>
-                </form>
-            </div>
-        </div>
+       
         <div class="function" id="events">
             <div class="main">
                 <form>
