@@ -19,8 +19,8 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             const regionTimeDate = response.zones[0].formatted;
-            const regionTime = moment(regionTimeDate).format("h:mm");
-            const regionDate = moment(regionTimeDate).format("DD-MM-YYYY");
+            const regionTime = moment(regionTimeDate).format("h:mma");
+            const regionDate = moment(regionTimeDate).format("MM/DD/YYYY");
             const timeZone = response.zones[0].abbreviation;
             const gmt = response.zones[0].gmtOffset;
             const currentTime = moment().format("h:mm");
@@ -43,7 +43,7 @@ $(document).ready(function () {
             $("#region-time").empty().prepend(regionTime);
             $("#date").empty().prepend(regionDate);
             $("#time-diff").empty().prepend(timeDiff);
-            $("#gmt").empty().append(gmt);
+            $("#gmt").empty().append("GMT: " + gmt);
             $("#time-zone").empty().prepend(timeZone);
             //Add switch statement to print out full time zone phrase base on abbreveation.
         });
@@ -58,7 +58,7 @@ $(document).ready(function () {
         console.log(eventDate);
         console.log(eventTime);
     }); 
-    $("#unit-convert").on("click",function(event){
+    $("#unit-convert").on("click", function(event){
         event.preventDefault();
         const x = $("#unit-select1").val();
         const y = $("#unit-select2").val();
@@ -67,4 +67,4 @@ $(document).ready(function () {
         console.log(y)
         console.log(value)
     });
-}); 
+});
