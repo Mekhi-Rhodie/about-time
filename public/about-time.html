@@ -175,12 +175,11 @@
             </div>
         </div>
         <div class="function" id="timer">
-            <div class="main">
                 <form id="timer-form">
-                    <div id="form-group">
-                        <label class="form-head" for="unit-select1">Unit:</label>
+                    <div id="unit1-select" class="form-group">
+                        <label class="form-head" for="unit-1">Unit:</label>
                         <br>
-                        <select name="pets" id="unit-select1">
+                        <select name="pets" id="unit-1">
                             <option value=""></option>
                             <option value="Millennium">Millennium</option>
                             <option value="Century">Century</option>
@@ -196,10 +195,10 @@
                         </select>
                     </div>
                     <p>to:</p>
-                    <div id="form-group">
-                        <label class="form-head" for="unit-select2">Unit:</label>
+                    <div id="unit2-select" class="form-group">
+                        <label class="form-head" for="unit-2">Unit:</label>
                         <br>
-                        <select name="pets" id="unit-select2">
+                        <select name="pets" id="unit-2">
                             <option value=""></option>
                             <option value="Millennium">Millennium</option>
                             <option value="Century">Century</option>
@@ -214,16 +213,18 @@
                             <option value="Millisecond">Millisecond</option>
                         </select>
                     </div>
-                    <div class="form-group">
+                    <div id="unitVal" class="form-group">
                         <label class="form-head" for="">Value:</label>
                         <br>
                         <input type="text" id="unit-value" name="unit-value">
                     </div>
                     <button type="submit" id="unit-convert">Convert</button>
+                    <div id="conversion-output" class="form-group">
+                        <output id="units" name="units" for="unit-select1, unit-select2"></output>
+                        <output id="conversion" name="conversion"></output>
+                    </div>
                 </form>
-            </div>
         </div>
-
         <div class="function" id="events">
             <div class="main">
                 <form>
