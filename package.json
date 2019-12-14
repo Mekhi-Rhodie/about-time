@@ -1,0 +1,27 @@
+{
+  "name": "about-time",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mekhi-Rhodie/about-time.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mekhi-Rhodie/about-time/issues"
+  },
+  "homepage": "https://github.com/Mekhi-Rhodie/about-time#readme",
+  "dependencies": {
+    "connect-mongo": "^3.2.0",
+    "express-session": "^1.17.0",
+    "firebase": "^7.6.0",
+    "mongoose": "^5.8.1",
+    "path": "^0.12.7"
+  }
+}
