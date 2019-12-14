@@ -1,10 +1,16 @@
+function valueAppend(unit){
+    $("#unit-output").append(unit)
+};
+
+
 function millenniumConversion(x, y, value) {
     switch (x === "Millennium") {
         case y === "Millennium":
             console.log(parseInt(value));
             break;
         case y === "Century":
-            console.log(value * 10);
+            let unit = value * 10;
+            valueAppend(unit);
             break;
         case y === "Decade":
             console.log(value * 100);
