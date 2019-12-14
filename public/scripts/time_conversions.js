@@ -433,8 +433,8 @@ function millisecondConversion(x, y, value) {
 };
 $("#unit-convert").on("click", function (event) {
     event.preventDefault();
-    const x = $("#unit-select1").val();
-    const y = $("#unit-select2").val();
+    const x = $("#unit-1").val();
+    const y = $("#unit-2").val();
     const value = $("#unit-value").val().trim();
     switch(x){
         case "Millennium":
@@ -473,17 +473,6 @@ $("#unit-convert").on("click", function (event) {
         default:
             console.log("Doesn't Work!")
     }
-    //millenniumConversion(x, y, value);
-    //decadeConversion(x, y, value);
-    //centuryConversion(x, y, value);
-    //yearConversion(x, y, value);
-    //monthConversion(x, y, value);
-    //weekConversion(x, y, value);
-    //dayConversion(x, y, value);
-    //hourConversion(x, y, value);
-    //minuteConversion(x, y, value);
-    //secondConversion(x, y, value);
-    //millisecondConversion(x, y, value);
 });
 
 // Put equation at the buttom of screen.
