@@ -3,8 +3,8 @@ $(document).ready(function () {
         event.preventDefault()
         const startTime = $("#start-time").val().trim();
         const endTime = $("#end-time").val().trim();
-        const eTime = moment(endTime, "H:mma").format("H:mm a");
-        const sTime = moment(startTime, "H:mma").format("H:mm a");
+        const eTime = moment(endTime, "H:mma").format("H:mm ");
+        const sTime = moment(startTime, "H:mma").format("H:mm ");
         const hourDifference = moment.utc(moment(eTime, "H:mma").diff(moment(sTime, "H:mma"))).format("H");
         const minDifference = moment.utc(moment(eTime, "H:mma").diff(moment(sTime, "H:mma"))).format("m");
         $("#diff-output").empty().append();
