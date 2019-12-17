@@ -117,12 +117,31 @@ textarea{
     box-shadow: 2px 2px 10px #000000;
 }
 
+
+
 #time-difference {
     grid-area: tDifference;
     padding: 2%;
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(2, auto);
+}
+
+
+.difference{
+    border-radius: 7px;
+    width: 35%;
+    padding: 2.5px;
+    border: 1.5px solid #000000;
+    font-size: 25px;
+    text-align: center;
+    background-color: whitesmoke;
+    color: black;
+    
+}
+
+output{
+    margin-top: 50px;
 }
 
 #world-clock {
@@ -160,6 +179,7 @@ textarea{
 hr{
     margin-bottom: 30px;
 }
+
 .details{
     background-color: white;
     border-radius: 7px;
