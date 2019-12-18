@@ -1,3 +1,17 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyB4S-faxpqmTp6ZQesvZK_dHiON0NfmMeY",
+    authDomain: "about-time-a5be6.firebaseapp.com",
+    databaseURL: "https://about-time-a5be6.firebaseio.com",
+    projectId: "about-time-a5be6",
+    storageBucket: "about-time-a5be6.appspot.com",
+    messagingSenderId: "476425103317",
+    appId: "1:476425103317:web:c11bbe158d69c326317f5c",
+    measurementId: "G-9VXQTSBBQ6"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+const database = firebase.database();
 $(document).ready(function () {
     $("#new-time").on("click", function (event) {
         event.preventDefault()
@@ -8,7 +22,7 @@ $(document).ready(function () {
         const hourDifference = moment.utc(moment(eTime, "H:mma").diff(moment(sTime, "H:mma"))).format("H");
         const minDifference = moment.utc(moment(eTime, "H:mma").diff(moment(sTime, "H:mma"))).format("m");
         $("#diff-output").empty().append();
-        $("#diff-output").empty().append("<output class='difference'>"+ "<strong>" +"Start Time:"+ "</strong>" +"   " + sTime + "       " + "<strong>" +"End Time:"+ "</strong>" + "   " + eTime + "</output>"+ "<br>" +"<output class='difference'>" + hourDifference + " Hours " + minDifference + " Minutes" + "</output>");
+        $("#diff-output").empty().append("<output class='output'>" + "<strong>" + "Start Time:" + "</strong>" + "   " + sTime + "       " + "<strong>" + "End Time:" + "</strong>" + "   " + eTime + "</output>" + "<br>" + "<output class='difference'>" + hourDifference + " Hours " + minDifference + " Minutes" + "</output>");
         //"<output class='difference'>" +  + "</output"
     });
     $("#search-button").on("click", function (event) {
