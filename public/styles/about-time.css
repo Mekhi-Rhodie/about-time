@@ -69,7 +69,7 @@ li {
     margin: 25px 0px 10px 25px;
 }
 
-.function{
+.function {
     background-image: linear-gradient(to bottom, #161515, #424242);
     border: 1px solid#3fffb2;
     box-shadow: 10px 15px 10px #000000;
@@ -77,7 +77,7 @@ li {
     border-radius: 5px;
 }
 
-.function:hover{
+.function:hover {
     background-image: linear-gradient(to bottom, #161515, #424242);
     border: 2.8px solid #00FFAE;
     box-shadow: 10px 15px 10px #000000;
@@ -93,17 +93,17 @@ li {
     border-radius: 5px;
 }*/
 
-.form-head{
+.form-head {
     font-size: 32px;
     font-weight: bold;
     text-shadow: 1.5px 1px 1px #3fffb2;
 }
 
-.form-group{
+.form-group {
     margin: 10px 0px 40px 0px;
 }
 
-select{
+select {
     border-radius: 7px;
     width: 30%;
     padding: 5px;
@@ -112,7 +112,7 @@ select{
     text-align: center;
 }
 
-input{
+input {
     border-radius: 7px;
     width: 35%;
     padding: 0px;
@@ -121,19 +121,17 @@ input{
     text-align: center;
 }
 
-#dOutput{
+#dOutput {
     margin-top: 50px;
 }
 
-textarea{
+textarea {
     width: 35%;
     font-size: 20px;
     border: 1.5px solid #000000;
     border-radius: 5px;
     box-shadow: 2px 2px 10px #000000;
 }
-
-
 
 #time-difference {
     grid-area: tDifference;
@@ -143,8 +141,7 @@ textarea{
     grid-template-columns: repeat(2, auto);
 }
 
-
-.difference{
+.difference {
     border-radius: 7px;
     width: 35%;
     padding: 2.5px;
@@ -153,10 +150,10 @@ textarea{
     text-align: center;
     background-color: whitesmoke;
     color: black;
-    
+    \left: ;
 }
 
-output{
+output {
     margin-top: 50px;
 }
 
@@ -165,16 +162,16 @@ output{
     padding: 3%;
 }
 
-#search-form{
+#search-form {
     margin-left: 7%;
     width: 100%;
 }
 
-#clock-search{
+#clock-search {
     text-align: left;
 }
 
-#searched-clocks{
+#searched-clocks {
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(3, auto);
@@ -187,16 +184,16 @@ output{
     box-shadow: 3px 3px 10px #000000;
 }
 
-#city-state{
+#city-state {
     font-size: 31px;
     font-weight: bold;
 }
 
-hr{
+hr {
     margin-bottom: 30px;
 }
 
-.details{
+.details {
     background-color: white;
     border-radius: 7px;
     box-shadow: 3.5px 3.5px 10px #000000;
@@ -206,8 +203,7 @@ hr{
     padding: 0px;
 }
 
-
-h2{
+h2 {
     margin-left: 42%;
     margin-top: 0px;
 }
