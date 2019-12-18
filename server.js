@@ -5,9 +5,13 @@ const mongoose = require('mongoose');
 const path = require('path');
 const app = express();
 const firebase = require('firebase');
-//const app2 = firebase.initializeApp({ ... });
 const PORT = 3000
+const Event = require("./models/eventModel")
+var bodyParser = require('body-parser');
+//const app2 = firebase.initializeApp({ ... });
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -19,22 +23,18 @@ app.get("/app", function(req, res){
     res.sendFile(path.join(__dirname, "/public/about-time.html"))
 });
 
-/*app.use(session({
-    secret: 'foo',
-    store: new MongoStore(options)
-}));*/
-
-mongoose.connect("mongodb://localhost/userdb", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost:27017/userdb", { useNewUrlParser: true });
 
 app.post("/submit", function(req, res) {
-    User.create(req.body)
-      .then(function(dbUser) {
-        res.json(dbUser);
+    Event.create(req.body)
+      .then(function() {
+        res.json();
       })
       .catch(function(err) {
         res.json(err);
       });
   });  
+
 app.listen(PORT, function(){
     console.log("App listening on port Andre " + PORT)
 });
