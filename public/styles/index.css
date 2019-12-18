@@ -111,6 +111,26 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.section{
+    padding: 10px;
+    background-image: linear-gradient(to bottom, #161515, #424242);
+    border: 1px solid#3fffb2;
+    box-shadow: 10px 15px 10px #000000;
+    color: silver;
+}
+
+details{
+    padding: 5px;
+    display: block;
+    line-height: 35px;
+}
+
+.symbol{
+    margin: 1px;
+    text-align: center;
+    font-size: 50px;
+}
+
 #footer {
     grid-area: footer;
     background-image: linear-gradient(to bottom, #161515, #424242);
