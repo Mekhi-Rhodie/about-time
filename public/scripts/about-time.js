@@ -12,6 +12,8 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 const database = firebase.database();
+const auth = firebase.auth();
+
 $(document).ready(function () {
     $("#new-time").on("click", function (event) {
         event.preventDefault()
@@ -51,10 +53,54 @@ $(document).ready(function () {
             //Add switch statement to print out full time zone phrase base on abbreveation.
         });
     });
+
+    function writeUserData(userId, name, email, imageUrl) {
+        firebase.database().ref('users/' + userId).set({
+            username: name,
+            email: email
+        });
+    }
+
     $("#event-submit").on("click", function (event) {
         event.preventDefault();
         const eventDescrip = $("#event-description").val().trim();
         const eventDate = $("#event-date").val().trim();
         const eventTime = $("#event-time").val().trim();
+        database.ref().set({
+            Event: eventDescrip,
+            Time: eventTime,
+            Date: eventDate
+        });
+        writeUserData();
+    });
+});
+/*auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+    .then(function () {
+        const email = $("#login-email").val();
+        const pass = $("#login-password").val();
+        return firebase.auth().signInWithEmailAndPassword(email, pass);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });*/
+auth.onAuthStateChanged(function (user) {
+    if (user) {
+        console.log("User is currently signed-in!")
+        var email = user.email;
+        var uid = user.uid;
+        var providerData = user.providerData;
+        console.log(email);
+        console.log(uid);
+        console.log(providerData);
+    } else {
+        console.log("No user is currently signed-in")
+    }
+    $("#log-out").on("click", function (event) {
+        firebase.auth().signOut().then(function () {
+            window.location.replace("/")
+            console.log("Sign-out successful.")
+        }).catch(function (error) {
+            console.log(error)
+        });
     });
 });
