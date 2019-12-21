@@ -12,9 +12,10 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 const auth = firebase.auth();
+
 function loginValidation() {
-    const username = $("#login-username").val().trim();
-    const password = $("#login-password").val().trim();
+    const username = $("#login-username").val();
+    const password = $("#login-password").val();
 
     if (username === "") {
         event.preventDefault()
@@ -26,12 +27,13 @@ function loginValidation() {
         console.log("Please enter a password!")
     };
 
-    console.log(username + " " + password)
+    console.log(email + " " + password)
 };
 
+
 function signupValidation() {
-    const signupUsername = $("#username").val().trim();
-    const signupPassword = $("#password").val().trim();
+    const signupUsername = $("#username").val();
+    const signupPassword = $("#password").val();
     const email = $("#email").val().trim();
 
     if (signupUsername === "") {
@@ -48,9 +50,10 @@ function signupValidation() {
         event.preventDefault();
         console.log("Please enter a E-mail")
     };
-
+    event.preventDefault()
     console.log(signupUsername + " " + signupPassword + " " + email)
 };
+
 
 $(document).ready(function () {
     $("#log-in").on("click", function (event) {
@@ -59,19 +62,58 @@ $(document).ready(function () {
     $("#sign-up").on("click", function (event) {
         $("#signup-modal").slideDown(580).css("display", "block")
     });
-    $("#signup").on("click", function(event){
+    $("#signup").on("click", function (event) {
         //const signupUsername = $("#username").val().trim();
-        const pass = $("#password").val().trim();
-        const email = $("#email").val().trim();
-        firebase.auth().createUserWithEmailAndPassword(email, pass);
+        signupValidation();
+        const email = $("#email").val();
+        const pass = $("#password").val();
+        auth.createUserWithEmailAndPassword(email, pass).catch(function (error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(email + " " + pass);
+        });
     });
     $(".close").on("click", function (event) {
         $("#signup-modal, #login-modal").slideUp(700)
     });
     $("#login").on("click", function (event) {
         loginValidation();
+        const email = $("#login-email").val();
+        const pass = $("#login-password").val();
+        auth.signInWithEmailAndPassword(email, pass).catch(function (error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(email + " " + pass);
+        });
+        window.location.replace("/app")
     });
-    $("#signup").on("click", function (event) {
-        signupValidation();
+});
+/*auth.setPersistence(firebase.auth.Auth.Persistence.SESSION)
+    .then(function () {
+        return firebase.auth().signInWithEmailAndPassword(email, pass);
+    })
+    .catch(function (error) {
+        console.log(error)
+    })*/
+auth.onAuthStateChanged(function (user) {
+    if (user) {
+        window.location.replace("/app")
+        console.log("User is currently signed-in!")
+        var email = user.email;
+        var uid = user.uid;
+        var providerData = user.providerData;
+        console.log(email);
+        console.log(uid);
+        console.log(providerData);
+    } else {
+        console.log("No user is currently signed-in")
+    }
+
+});
+$("#log-out").on("click", function (event) {
+    firebase.auth().signOut().then(function () {
+        console.log("Sign-out successful.")
+    }).catch(function (error) {
+        console.log(error)
     });
-}); 
+});
