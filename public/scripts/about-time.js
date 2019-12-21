@@ -53,14 +53,7 @@ $(document).ready(function () {
             //Add switch statement to print out full time zone phrase base on abbreveation.
         });
     });
-
-    function writeUserData(userId, name, email, imageUrl) {
-        firebase.database().ref('users/' + userId).set({
-            username: name,
-            email: email
-        });
-    }
-
+    
     $("#event-submit").on("click", function (event) {
         event.preventDefault();
         const eventDescrip = $("#event-description").val().trim();
