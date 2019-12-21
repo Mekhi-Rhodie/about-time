@@ -95,7 +95,6 @@ auth.onAuthStateChanged(function (user) {
     } else {
         console.log("No user is currently signed-in")
     }
-    
 });
 $("#log-out").on("click", function(event){
         firebase.auth().signOut().then(function() {
