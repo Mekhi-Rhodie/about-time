@@ -74,21 +74,12 @@ $(document).ready(function () {
         writeUserData();
     });
 });
-/*auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
-    .then(function () {
-        const email = $("#login-email").val();
-        const pass = $("#login-password").val();
-        return firebase.auth().signInWithEmailAndPassword(email, pass);
-    })
-    .catch(function (error) {
-        console.log(error);
-    });*/
 auth.onAuthStateChanged(function (user) {
     if (user) {
         console.log("User is currently signed-in!")
-        var email = user.email;
-        var uid = user.uid;
-        var providerData = user.providerData;
+        const email = user.email;
+        const uid = user.uid;
+        const providerData = user.providerData;
         console.log(email);
         console.log(uid);
         console.log(providerData);
