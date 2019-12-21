@@ -141,7 +141,7 @@ textarea {
     grid-template-columns: repeat(2, auto);
 }
 
-.difference {
+.output {
     border-radius: 7px;
     width: 35%;
     padding: 2.5px;
@@ -150,7 +150,6 @@ textarea {
     text-align: center;
     background-color: whitesmoke;
     color: black;
-    \left: ;
 }
 
 output {
@@ -211,6 +210,9 @@ h2 {
 #timer {
     grid-area: timer;
     padding: 3%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, auto);
 }
 
 /*output{
