@@ -9,14 +9,14 @@ function millenniumConversion(x, y, value) {
             console.log(parseInt(value));
             break;
         case y === "Century":
-            let unit = value * 10;
-            valueAppend(unit);
+            $("#unitOutput").empty().append("<output class='output'>"+ value * 10 +"</output>");
+            //valueAppend(unit);
             break;
         case y === "Decade":
-            console.log(value * 100);
+            $("#unitOutput").empty().append("<output class='output'>"+ value * 100 +"</output>");
             break;
         case y === "Year":
-            console.log(value * 1000);
+            $("#unitOutput").empty().append("<output class='output'>"+ value * 1000 +"</output>");
             break;
         case y === "Month":
             console.log(value * 12000);
