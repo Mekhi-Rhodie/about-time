@@ -30,7 +30,6 @@ function loginValidation() {
     console.log(email + " " + password)
 };
 
-
 function signupValidation() {
     const signupUsername = $("#username").val();
     const signupPassword = $("#password").val();
@@ -54,7 +53,6 @@ function signupValidation() {
     console.log(signupUsername + " " + signupPassword + " " + email)
 };
 
-
 $(document).ready(function () {
     $("#log-in").on("click", function (event) {
         $("#login-modal").slideDown(580).css("display", "block")
@@ -70,7 +68,7 @@ $(document).ready(function () {
         auth.createUserWithEmailAndPassword(email, pass).catch(function (error) {
             var errorCode = error.code;
             var errorMessage = error.message;
-            console.log(email + " " + pass);
+            console.log(email+ " " + pass);
         });
     });
     $(".close").on("click", function (event) {
@@ -81,39 +79,28 @@ $(document).ready(function () {
         const email = $("#login-email").val();
         const pass = $("#login-password").val();
         auth.signInWithEmailAndPassword(email, pass).catch(function (error) {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            console.log(email + " " + pass);
-        });
-        window.location.replace("/app")
+            console.log(email+ " " + pass);
+        })
     });
 });
-/*auth.setPersistence(firebase.auth.Auth.Persistence.SESSION)
-    .then(function () {
-        return firebase.auth().signInWithEmailAndPassword(email, pass);
-    })
-    .catch(function (error) {
-        console.log(error)
-    })*/
 auth.onAuthStateChanged(function (user) {
     if (user) {
-        window.location.replace("/app")
-        console.log("User is currently signed-in!")
         var email = user.email;
         var uid = user.uid;
         var providerData = user.providerData;
         console.log(email);
         console.log(uid);
         console.log(providerData);
+        window.location.replace("/app")
     } else {
         console.log("No user is currently signed-in")
     }
-
+    
 });
-$("#log-out").on("click", function (event) {
-    firebase.auth().signOut().then(function () {
-        console.log("Sign-out successful.")
-    }).catch(function (error) {
-        console.log(error)
+$("#log-out").on("click", function(event){
+        firebase.auth().signOut().then(function() {
+            console.log("Sign-out successful.")
+          }).catch(function(error) {
+            console.log(error)
+          });
     });
-});
