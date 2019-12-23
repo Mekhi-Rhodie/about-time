@@ -53,17 +53,16 @@ $(document).ready(function () {
             //Add switch statement to print out full time zone phrase base on abbreveation.
         });
     });
-    
+    function writeUserData(uid, email) {
+            database.ref('users/' + uid).set({
+              email: email
+            });
+          }
     $("#event-submit").on("click", function (event) {
         event.preventDefault();
         const eventDescrip = $("#event-description").val().trim();
         const eventDate = $("#event-date").val().trim();
         const eventTime = $("#event-time").val().trim();
-        database.ref().set({
-            Event: eventDescrip,
-            Time: eventTime,
-            Date: eventDate
-        });
         writeUserData();
     });
 });
