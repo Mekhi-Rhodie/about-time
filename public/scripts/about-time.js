@@ -11,8 +11,12 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-const database = firebase.database();
+const db = firebase.firestore();
 const auth = firebase.auth();
+const cTime = moment().format("H:mm")
+const cDate = moment().format("YYYY-MM-DD")
+const currentDateTime = cDate + " " + cTime
+console.log(currentDateTime)
 
 $(document).ready(function () {
     $("#new-time").on("click", function (event) {
@@ -53,19 +57,47 @@ $(document).ready(function () {
             //Add switch statement to print out full time zone phrase base on abbreveation.
         });
     });
-    function writeUserData(uid, email) {
-            database.ref('users/' + uid).set({
-              email: email
-            });
-          }
-    $("#event-submit").on("click", function (event) {
-        event.preventDefault();
-        const eventDescrip = $("#event-description").val().trim();
-        const eventDate = $("#event-date").val().trim();
-        const eventTime = $("#event-time").val().trim();
-        writeUserData();
+    /*event:  eventDescrip,
+    eventTime: eventDate + " " + eventTime,*/
+    auth.onAuthStateChanged(function (user) {
+        $("#event-submit").on("click", function (event) {
+            event.preventDefault();
+            const eventDescrip = $("#event-description").val().trim();
+            const eventDate = $("#event-date").val().trim();
+            const eventTime = $("#event-time").val().trim();
+            db.collection("users").doc(user.email).set({
+                event: eventDescrip,
+                eventTime: eventDate + " " + eventTime
+            })
+                .then(function () {
+                    console.log("Document successfully written!");
+                })
+                .catch(function (error) {
+                    console.error("Error writing document: ", error);
+                });
+        });
     });
 });
+
+auth.onAuthStateChanged(function(user){
+    const eventRef = db.collection("users").doc(user.email);
+    eventRef.get().then(function(doc) {
+        if (doc.exists) {
+            console.log(doc.data().eventTime);
+        } else {
+            // doc.data() will be undefined in this case
+            console.log("No such document!");
+        }
+        if(doc.data().eventTime === currentDateTime){
+            console.log("It Works!!!!")
+        }else{
+            console.log("You have Failed!!")
+        }
+    }).catch(function(error) {
+        console.log("Error getting document:", error);
+    });
+}); 
+
 auth.onAuthStateChanged(function (user) {
     if (user) {
         console.log("User is currently signed-in!")
