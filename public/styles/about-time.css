@@ -142,14 +142,29 @@ textarea {
 }
 
 .output {
+    display: inline;
     border-radius: 7px;
-    width: 35%;
     padding: 6px;
     border: 1.5px solid #000000;
     font-size: 25px;
     text-align: center;
     background-color: whitesmoke;
     color: black;
+    box-shadow: 5.5px 5.5px 3px black;
+    margin-left: 25%;
+}
+
+.timeDiff{
+    margin-top: 50px;
+    border-radius: 7px;
+    padding: 6px;
+    border: 1.5px solid #000000;
+    font-size: 25px;
+    text-align: center;
+    background-color: whitesmoke;
+    color: black;
+    box-shadow: 5.5px 5.5px 3px black;
+    margin-left: 25%;
 }
 
 output {
