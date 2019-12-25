@@ -15,7 +15,7 @@ const db = firebase.firestore();
 const auth = firebase.auth();
 const cTime = moment().format("H:mm")
 const cDate = moment().format("YYYY-MM-DD")
-const currentDateTime = cDate + " " + cTime
+const currentDateTime = cTime + " " + cDate
 console.log(currentDateTime)
 
 $(document).ready(function () {
@@ -57,8 +57,6 @@ $(document).ready(function () {
             //Add switch statement to print out full time zone phrase base on abbreveation.
         });
     });
-    /*event:  eventDescrip,
-    eventTime: eventDate + " " + eventTime,*/
     auth.onAuthStateChanged(function (user) {
         $("#event-submit").on("click", function (event) {
             event.preventDefault();
@@ -67,7 +65,7 @@ $(document).ready(function () {
             const eventTime = $("#event-time").val().trim();
             db.collection("users").doc(user.email).set({
                 event: eventDescrip,
-                eventTime: eventDate + " " + eventTime
+                eventTime: eventTime + " " + eventDate
             })
                 .then(function () {
                     console.log("Document successfully written!");
@@ -78,26 +76,29 @@ $(document).ready(function () {
         });
     });
 });
-
 auth.onAuthStateChanged(function(user){
     const eventRef = db.collection("users").doc(user.email);
     eventRef.get().then(function(doc) {
+        const event = doc.data().event;
+        const eventDataTime = doc.data().eventTime;
+        const message = "Sorry, you currently have no events scheduled for today." 
         if (doc.exists) {
-            console.log(doc.data().eventTime);
+            console.log(event);
+            console.log(eventDataTime)
         } else {
             // doc.data() will be undefined in this case
             console.log("No such document!");
         }
-        if(doc.data().eventTime === currentDateTime){
-            console.log("It Works!!!!")
-        }else{
-            console.log("You have Failed!!")
+        if(eventDataTime === currentDateTime){
+            $("#event-output").append("<output class='output'>" + event + "</output>")
+            $("#event-output").append("<output class='output'>" + eventDataTime + "</output>")
+        }else{//(eventDataTime !== currentDateTime){
+            $("#event-output").append("<p class='output'>" + message + "</p>")
         }
     }).catch(function(error) {
         console.log("Error getting document:", error);
     });
-}); 
-
+});
 auth.onAuthStateChanged(function (user) {
     if (user) {
         console.log("User is currently signed-in!")
