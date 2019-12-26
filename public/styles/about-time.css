@@ -142,7 +142,7 @@ textarea {
 }
 
 .output {
-    display: inline;
+    display: inline-block;
     border-radius: 7px;
     padding: 6px;
     border: 1.5px solid #000000;
@@ -151,7 +151,12 @@ textarea {
     background-color: whitesmoke;
     color: black;
     box-shadow: 5.5px 5.5px 3px black;
-    margin-left: 25%;
+}
+
+#end-time, #start-time, #event-description, #event-date, #event-time{
+    padding: 0px;
+    margin: 0px;
+    width: 75%;
 }
 
 .timeDiff{
@@ -164,7 +169,11 @@ textarea {
     background-color: whitesmoke;
     color: black;
     box-shadow: 5.5px 5.5px 3px black;
-    margin-left: 25%;
+    width: 60%;
+}
+
+#diff-output{
+    float: right;
 }
 
 output {
@@ -230,14 +239,6 @@ h2 {
     grid-template-columns: repeat(2, auto);
 }
 
-/*output{
-
-}
-
-#conversion-output{
-
-}*/
-
 #events {
     grid-area: events;
     padding: 2%;
@@ -249,10 +250,6 @@ h2 {
 #event-input{
     padding: 0px;
 }
-
-/*#event-output{
-
-}*/
 
 button {
     height: 40px;
