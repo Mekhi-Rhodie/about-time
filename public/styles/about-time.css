@@ -22,26 +22,35 @@
 
 header {
     display: grid;
-    grid-template-columns: .5fr 2fr;
-    grid-template-rows: minmax(20px, auto);
+    grid-template-columns: .5fr 2fr 1fr;
+    grid-template-rows: none;
     padding: 0px;
+    grid-template-areas: 
+    "hImg hTitle hButtons"
+    ;
 }
 
 #header-img {
-    grid-column: 1/2;
+    grid-area: hImg;
     margin-top: 25%;
     margin-left: 10px;
-    padding: 0%;
 }
 
 #header-title {
-    grid-column: 2/3;
+    grid-column: hTitle;
     text-align: center;
     font-size: 50px;
     font-weight: bolder;
-    padding: 0%;
     text-shadow: 3px 3px 7px #23ffc8;
 }
+
+#header-buttons {
+    grid-area: hButtons;
+    margin-top: 25%;
+    margin-left: 25%;
+}
+
+
 
 #navigation {
     grid-area: nav;
