@@ -40,7 +40,7 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             const regionTimeDate = response.zones[0].formatted;
-            const regionTime = moment(regionTimeDate).format("h:mma");
+            const regionTime = moment(regionTimeDate).format("h:mm A");
             const regionDate = moment(regionTimeDate).format("MM/DD/YYYY");
             const timeZone = response.zones[0].abbreviation;
             const gmt = response.zones[0].gmtOffset;
