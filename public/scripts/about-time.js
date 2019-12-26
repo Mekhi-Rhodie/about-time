@@ -66,12 +66,12 @@ $(document).ready(function () {
                 event: eventDescrip,
                 eventTime: eventTime + " " + eventDate
             })
-                .then(function () {
-                    console.log("Document successfully written!");
-                })
-                .catch(function (error) {
-                    console.error("Error writing document: ", error);
-                });
+            .then(function () {
+                console.log("Document successfully written!");
+            })
+            .catch(function (error) {
+                console.error("Error writing document: ", error);
+            });
         });
     });
 });
