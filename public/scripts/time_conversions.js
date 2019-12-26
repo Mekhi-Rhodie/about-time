@@ -9,74 +9,77 @@ function millenniumConversion(x, y, value) {
             console.log(parseInt(value));
             break;
         case y === "Century":
-            $("#unitOutput").empty().append("<output class='output'>"+ value * 10 +"</output>");
-            //valueAppend(unit);
+            //$("#unitOutput").empty().append("<p class='output'>"+ value + "  " + x + "=" + y +"</p>");
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 10 +"</p>");
             break;
         case y === "Decade":
-            $("#unitOutput").empty().append("<output class='output'>"+ value * 100 +"</output>");
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 100 +"</p>");
             break;
         case y === "Year":
-            $("#unitOutput").empty().append("<output class='output'>"+ value * 1000 +"</output>");
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 1000 +"</p>");
             break;
         case y === "Month":
-            console.log(value * 12000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 12000 +"</p>");
             break;
         case y === "Week":
-            console.log(value * 52142.85);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 52142.85 +"</p>");
             break;
         case y === "Day":
-            console.log(value * 365000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 365000 +"</p>");
             break;
         case y === "Hour":
-            console.log(value * 8760000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 8760000 +"</p>");
             break;
         case y === "Minute":
-            console.log(value * 525600000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 525600000 +"</p>");
             break;
         case y === "Second":
-            console.log(value * 31536000000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 31536000000 +"</p>");
             break;
         case y === "Millisecond":
-            console.log(value * 31536000000000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 31536000000000 +"</p>");
             break;
         default:
-            console.log("It didn't work");
+            $("#unitOutput").empty().append("<p class='output'>"+ "Please input a valid unit!" +"</p>");
     }
 };
 function centuryConversion(x, y, value) {
     switch (x === "Century") {
         case y === "Millennium":
-            console.log(value / 10);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 10 +"</p>");
             break;
         case y === "Century":
-            console.log(parseInt(value));
+            $("#unitOutput").empty().append("<p class='output'>"+ parseInt(value) +"</p>");
             break;
         case y === "Decade":
-            console.log(value * 10);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 10 +"</p>");
             break;
         case y === "Year":
-            console.log(value * 100);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 100 +"</p>");
             break;
         case y === "Month":
-            console.log(value * 1200);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 1200 +"</p>");
             break;
         case y === "Week":
-            console.log(value * 5214.28);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 5214.28 +"</p>");
             break;
         case y === "Day":
-            console.log(value * 36500);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 36500 +"</p>");
             break;
         case y === "Hour":
-            console.log(value * 876000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 876000 +"</p>");
             break;
         case y === "Minute":
-            console.log(value * 52560000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 52560000 +"</p>");
+            console.log();
             break;
         case y === "Second":
-            console.log(value * 3153600000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 3153600000 +"</p>");
+            console.log();
             break;
         case y === "Millisecond":
-            console.log(value * 3153600000000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 3153600000000 +"</p>");
+            console.log();
             break;
         default:
             console.log("It didn't work");
@@ -86,76 +89,97 @@ function centuryConversion(x, y, value) {
 function decadeConversion(x, y, value) {
     switch (x === "Decade") {
         case y === "Millennium":
-            console.log(value / 100);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 100 +"</p>");
+            console.log();
             break;
         case y === "Century":
-            console.log(value / 10);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 10 +"</p>");
+            console.log();
             break;
         case y === "Decade":
-            console.log(parseInt(value));
+            $("#unitOutput").empty().append("<p class='output'>"+ parseInt(value) +"</p>");
+            console.log();
             break;
         case y === "Year":
-            console.log(value * 10);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 10 +"</p>");
+            console.log();
             break;
         case y === "Month":
-            console.log(value * 120);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 120 +"</p>");
+            console.log();
             break;
         case y === "Week":
-            console.log(value * 521.42);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 521.42 +"</p>");
+            console.log();
             break;
         case y === "Day":
-            console.log(value * 3650);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 3650 +"</p>");
+            console.log();
             break;
         case y === "Hour":
-            console.log(value * 87600);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 87600 +"</p>");
+            console.log();
             break;
         case y === "Minute":
-            console.log(value * 5256000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 5256000 +"</p>");
+            console.log();
             break;
         case y === "Second":
-            console.log(value * 315360000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 315360000 +"</p>");
+            console.log();
             break;
         case y === "Millisecond":
-            console.log(value * 315360000000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 31536000000 +"</p>");
+            console.log(0);
             break;
         default:
-            console.log("It didn't work");
+            $("#unitOutput").empty().append("<p class='output'>"+ "Please input a valid unit" +"</p>");;
     };
 };
 function yearConversion(x, y, value) {
     switch (x === "Year") {
         case y === "Millennium":
-            console.log(value / 1000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 1000 +"</p>");
+            console.log();
             break;
         case y === "Century":
-            console.log(value / 100);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 100 +"</p>");
+            console.log();
             break;
         case y === "Decade":
-            console.log(value / 10);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 10 +"</p>");
+            console.log();
             break;
         case y === "Year":
-            console.log(parseInt(value));
+            $("#unitOutput").empty().append("<p class='output'>"+ parseInt(value) +"</p>");
+            console.log();
             break;
         case y === "Month":
-            console.log(value * 12);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 12 +"</p>");
+            console.log();
             break;
         case y === "Week":
-            console.log(value * 52.14);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 52.14 +"</p>");
+            console.log();
             break;
         case y === "Day":
-            console.log(value * 365);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 365 +"</p>");
             break;
         case y === "Hour":
-            console.log(value * 8760);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 8760 +"</p>");
+            console.log();
             break;
         case y === "Minute":
-            console.log(value * 525600);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 525600 +"</p>");
+            console.log();
             break;
         case y === "Second":
-            console.log(value * 31536000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 31536000 +"</p>");
+            console.log();
             break;
         case y === "Millisecond":
-            console.log(value * 31536000000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 31536000000 +"</p>");
+            console.log();
             break;
         default:
             console.log("It didn't work");
@@ -164,37 +188,48 @@ function yearConversion(x, y, value) {
 function monthConversion(x, y, value) {
     switch (x === "Month") {
         case y === "Millennium":
-            console.log(value / 11999.987);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 11999.987 +"</p>");
+            console.log();
             break;
         case y === "Century":
-            console.log(value / 1199.999);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 1199.999 +"</p>");
+            console.log();
             break;
         case y === "Decade":
-            console.log(value / 120);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 120 +"</p>");
+            console.log();
             break;
         case y === "Year":
-            console.log(value / 12);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 12 +"</p>");
+            console.log();
             break;
         case y === "Month":
+            $("#unitOutput").empty().append("<p class='output'>"+ value +"</p>");
             console.log(value);
             break;
         case y === "Week":
-            console.log(value * 4.345);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 4.345 +"</p>");
+            console.log();
             break;
         case y === "Day":
-            console.log(value * 30.417);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 30.417 +"</p>");
+            console.log();
             break;
         case y === "Hour":
-            console.log(value * 730.001);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 730.001 +"</p>");
+            console.log();
             break;
         case y === "Minute":
-            console.log(value * 43800.048);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 43800.048 +"</p>");
+            console.log();
             break;
         case y === "Second":
-            console.log(value * 2.628e+6);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 2.628e+6 +"</p>");
+            console.log();
             break;
         case y === "Millisecond":
-            console.log(value *  2.628e+9);
+            $("#unitOutput").empty().append("<p class='output'>"+ value *  2.628e+9 +"</p>");
+            console.log();
             break;
         default:
             console.log("It didn't work");
@@ -204,37 +239,48 @@ function monthConversion(x, y, value) {
 function weekConversion(x, y, value) {
     switch (x === "Week") {
         case y === "Millennium":
-            console.log(value / 52142.857);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 52142.857 +"</p>");
+            console.log();
             break;
         case y === "Century":
-            console.log(value / 5214.286);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 5214.286 +"</p>");
+            console.log();
             break;
         case y === "Decade":
-            console.log(value / 521.429);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 521.429 +"</p>");
+            console.log();
             break;
         case y === "Year":
-            console.log(value / 52.143);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 52.143 +"</p>");
+            console.log();
             break;
         case y === "Month":
-            console.log(value / 4.345);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 4.345 +"</p>");
+            console.log();
             break;
         case y === "Week":
-            console.log(value);
+            $("#unitOutput").empty().append("<p class='output'>"+ value +"</p>");
+            console.log();
             break;
         case y === "Day":
-            console.log(value * 7);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 7 +"</p>");
+            console.log();
             break;
         case y === "Hour":
-            console.log(value * 168);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 168 +"</p>");
+            console.log();
             break;
         case y === "Minute":
-            console.log(value * 10080);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 10080 +"</p>");
+            console.log();
             break;
         case y === "Second":
-            console.log(value * 604800);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 604800 +"</p>");
+            console.log();
             break;
         case y === "Millisecond":
-            console.log(value * 6.048e+8);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 6.048e+8 +"</p>");
+            console.log();
             break;
         default:
             console.log("It didn't work");
@@ -244,37 +290,48 @@ function weekConversion(x, y, value) {
 function dayConversion(x, y, value) {
     switch (x === "Day") {
         case y === "Millennium":
-            console.log(value / 365000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 365000 +"</p>");
+            console.log();
             break;
         case y === "Century":
-            console.log(value / 36500);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 36500 +"</p>");
+            console.log();
             break;
         case y === "Decade":
-            console.log(value / 3650);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 3650 +"</p>");
+            console.log();
             break;
         case y === "Year":
-            console.log(value / 365);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 365 +"</p>");
+            console.log();
             break;
         case y === "Month":
-            console.log(value / 30.417);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 30.417 +"</p>");
+            console.log();
             break;
         case y === "Week":
-            console.log(value / 7);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 7 +"</p>");
+            console.log();
             break;
         case y === "Day":
+            $("#unitOutput").empty().append("<p class='output'>"+ value +"</p>");
             console.log(value);
             break;
         case y === "Hour":
-            console.log(value * 24);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 24 +"</p>");
+            console.log();
             break;
         case y === "Minute":
-            console.log(value * 1440);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 1440 +"</p>");
+            console.log();
             break;
         case y === "Second":
-            console.log(value * 86400);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 86400 +"</p>");
+            console.log();
             break;
         case y === "Millisecond":
-            console.log(value * 8.64e+7);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 8.64e+7 +"</p>");
+            console.log();
             break;
         default:
             console.log("It didn't work");
@@ -284,37 +341,48 @@ function dayConversion(x, y, value) {
 function hourConversion(x, y, value) {
     switch (x === "Hour") {
         case y === "Millennium":
-            console.log(value / 8.76e+6);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 8.76e+6 +"</p>");
+            console.log();
             break;
         case y === "Century":
-            console.log(value / 876000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 876000 +"</p>");
+            console.log();
             break;
         case y === "Decade":
-            console.log(value / 87600);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 87600 +"</p>");
+            console.log();
             break;
         case y === "Year":
-            console.log(value / 8760);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 8760 +"</p>");
+            console.log();
             break;
         case y === "Month":
-            console.log(value / 730.001);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 730.001 +"</p>");
+            console.log();
             break;
         case y === "Week":
-            console.log(value / 168);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 168 +"</p>");
+            console.log();
             break;
         case y === "Day":
-            console.log(value / 24);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 24 +"</p>");
+            console.log();
             break;
         case y === "Hour":
+            $("#unitOutput").empty().append("<p class='output'>"+ value +"</p>");
             console.log(value);
             break;
         case y === "Minute":
-            console.log(value * 60);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 60 +"</p>");
+            console.log();
             break;
         case y === "Second":
-            console.log(value * 3600);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 3600 +"</p>");
+            console.log();
             break;
         case y === "Millisecond":
-            console.log(value *  3.6e+6);
+            $("#unitOutput").empty().append("<p class='output'>"+ value *  3.6e+6 +"</p>");
+            console.log();
             break;
         default:
             console.log("It didn't work");
@@ -323,37 +391,48 @@ function hourConversion(x, y, value) {
 function minuteConversion(x, y, value) {
     switch (x === "Minute") {
         case y === "Millennium":
-            console.log(value / 5.256e+8);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 5.256e+8 +"</p>");
+            console.log();
             break;
         case y === "Century":
-            console.log(value / 5.256e+7);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 5.256e+7 +"</p>");
+            console.log();
             break;
         case y === "Decade":
-            console.log(value / 5.256e+6);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 5.256e+6 +"</p>");
+            console.log();
             break;
         case y === "Year":
-            console.log(value / 525600);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 525600 +"</p>");
+            console.log();
             break;
         case y === "Month":
-            console.log(value / 43800.048);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 43800.048 +"</p>");
+            console.log();
             break;
         case y === "Week":
-            console.log(value / 10080);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 10080 +"</p>");
+            console.log();
             break;
         case y === "Day":
-            console.log(value / 1440);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 1440 +"</p>");
+            console.log();
             break;
         case y === "Hour":
-            console.log(value / 60);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 60 +"</p>");
+            console.log();
             break;
         case y === "Minute":
-            console.log(value);
+            $("#unitOutput").empty().append("<p class='output'>"+ value +"</p>"); 
+            console.log();
             break;
         case y === "Second":
-            console.log(value * 1000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 1000 +"</p>");
+            console.log();
             break;
         case y === "Millisecond":
-            console.log(value * 60000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 60000 +"</p>");
+            console.log();
             break;
         default:
             console.log("It didn't work");
@@ -362,37 +441,48 @@ function minuteConversion(x, y, value) {
 function secondConversion(x, y, value) {
     switch (x === "Second") {
         case y === "Millennium":
-            console.log(value / 3.154e+10);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 3.154e+10 +"</p>");
+            console.log();
             break;
         case y === "Century":
-            console.log(value / 3.154e+9);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 3.154e+9 +"</p>");
+            console.log();
             break;
         case y === "Decade":
-            console.log(value / 3.154e+8);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 3.154e+8 +"</p>");
+            console.log();
             break;
         case y === "Year":
-            console.log(value / 3.154e+7);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 3.154e+7 +"</p>");
+            console.log();
             break;
         case y === "Month":
-            console.log(value / 2.628e+6);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 2.628e+6 +"</p>");
+            console.log();
             break;
         case y === "Week":
-            console.log(value / 604800);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 604800 +"</p>");
+            console.log();
             break;
         case y === "Day":
-            console.log(value / 86400);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 86400 +"</p>");
+            console.log();
             break;
         case y === "Hour":
-            console.log(value / 3600);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 3600 +"</p>");
+            console.log();
             break;
         case y === "Minute":
-            console.log(value / 60);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 60 +"</p>");
+            console.log();
             break;
         case y === "Second":
-            console.log(value);
+            $("#unitOutput").empty().append("<p class='output'>"+ value +"</p>")
+            console.log();
             break;
         case y === "Millisecond":
-            console.log(value * 1000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value * 1000 +"</p>")
+            console.log();
             break;
         default:
             console.log("It didn't work");
@@ -401,36 +491,47 @@ function secondConversion(x, y, value) {
 function millisecondConversion(x, y, value) {
     switch (x === "Month") {
         case y === "Millennium":
-            console.log(value / 3.154e+13);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 3.154e+13 +"</p>")
+            console.log();
             break;
         case y === "Century":
-            console.log(value / 3.154e+12);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 3.154e+12 +"</p>")
+            console.log();
             break;
         case y === "Decade":
-            console.log(value / 3.154e+11);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 3.154e+11 +"</p>")
+            console.log();
             break;
         case y === "Year":
-            console.log(value / 3.154e+10);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 3.154e+10 +"</p>")
+            console.log();
             break;
         case y === "Month":
-            console.log(value / 2.628e+9);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 2.628e+9 +"</p>")
+            console.log();
             break;
         case y === "Week":
-            console.log(value / 6.048e+8);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 6.048e+8 +"</p>")
+            console.log();
             break;
         case y === "Day":
-            console.log(value / 8.64e+7);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 8.64e+7 +"</p>")
+            console.log();
             break;
         case y === "Hour":
-            console.log(value / 3.6e+6);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 3.6e+6 +"</p>")
+            console.log();
             break;
         case y === "Minute":
-            console.log(value / 60000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 60000 +"</p>")
+            console.log();
             break;
         case y === "Second":
-            console.log(value / 1000);
+            $("#unitOutput").empty().append("<p class='output'>"+ value / 1000 +"</p>")
+            console.log();
             break;
         case y === "Millisecond":
+            $("#unitOutput").empty().append("<p class='output'>"+ value +"</p>")
             console.log(value);
             break;
         default:
