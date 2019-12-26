@@ -68,7 +68,7 @@ $(document).ready(function () {
         auth.createUserWithEmailAndPassword(email, pass).catch(function (error) {
             var errorCode = error.code;
             var errorMessage = error.message;
-            console.log(email+ " " + pass);
+            console.log(email + " " + pass);
         });
     });
     $(".close").on("click", function (event) {
@@ -76,10 +76,11 @@ $(document).ready(function () {
     });
     $("#login").on("click", function (event) {
         loginValidation();
-        const email = $("#login-email").val();
-        const pass = $("#login-password").val();
+
         auth.signInWithEmailAndPassword(email, pass).catch(function (error) {
-            console.log(email+ " " + pass);
+            const email = $("#login-email").val();
+            const pass = $("#login-password").val();
+            console.log(email + " " + pass);
         })
     });
 });
@@ -96,10 +97,10 @@ auth.onAuthStateChanged(function (user) {
         console.log("No user is currently signed-in")
     }
 });
-$("#log-out").on("click", function(event){
-        firebase.auth().signOut().then(function() {
-            console.log("Sign-out successful.")
-          }).catch(function(error) {
-            console.log(error)
-          });
+$("#log-out").on("click", function (event) {
+    firebase.auth().signOut().then(function () {
+        console.log("Sign-out successful.")
+    }).catch(function (error) {
+        console.log(error)
     });
+});
