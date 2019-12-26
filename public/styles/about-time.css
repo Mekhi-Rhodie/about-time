@@ -85,14 +85,6 @@ li {
     border-radius: 5px;
 }
 
-/*.function:focus{
-    background-image: linear-gradient(to bottom, #161515, #424242);
-    border: 1px solid #5495FF;
-    box-shadow: 10px 15px 10px #000000;
-    color: silver;
-    border-radius: 5px;
-}*/
-
 .form-head {
     font-size: 32px;
     font-weight: bold;
@@ -148,7 +140,7 @@ textarea {
     border: 1.5px solid #000000;
     font-size: 25px;
     text-align: center;
-    background-color: whitesmoke;
+    background-color: white;
     color: black;
     box-shadow: 5.5px 5.5px 3px black;
 }
