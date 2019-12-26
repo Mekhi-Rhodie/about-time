@@ -27,7 +27,7 @@ $(document).ready(function () {
         const sTime = moment(startTime, "H:mma").format("H:mm ");
         const hourDifference = moment.utc(moment(eTime, "H:mma").diff(moment(sTime, "H:mma"))).format("H");
         const minDifference = moment.utc(moment(eTime, "H:mma").diff(moment(sTime, "H:mma"))).format("m");
-        $("#diff-output").slideDown(900).empty().append("<p class='output'>" + "<strong>" + "Start Time:" + "</strong>" + "   " + startTime + "                " + "<strong>" + "End Time:" + "</strong>" + "   " + endTime + "</p>" + "<br>" + "<p class='timeDiff'>" + hourDifference + " Hours " + minDifference + " Minutes" + "</p>");
+        $("#diff-output").slideDown(900).empty().append("<p class='output'>" + "<strong>" + "Start Time:" + "</strong>" + "   " + startTime + " " + "<strong>" + "End Time:" + "</strong>" + "   " + endTime + "</p>" + "<br>" + "<p class='timeDiff'>" + hourDifference + " Hours " + minDifference + " Minutes" + "</p>");
         //"<output class='difference'>" +  + "</output>"
     });
     $("#search-button").on("click", function (event) {
