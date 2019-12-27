@@ -74,13 +74,15 @@ $(document).ready(function () {
     $(".close").on("click", function (event) {
         $("#signup-modal, #login-modal").slideUp(700)
     });
-    $("#login").on("click", function (event) {
-        loginValidation();
+    
 
         auth.signInWithEmailAndPassword(email, pass).catch(function (error) {
+            $("#login").on("click", function (event) {
+                loginValidation();
             const email = $("#login-email").val();
             const pass = $("#login-password").val();
             console.log(email + " " + pass);
+            console.log(error)
         })
     });
 });
