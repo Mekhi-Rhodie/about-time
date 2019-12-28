@@ -6,7 +6,8 @@ const path = require('path');
 const app = express();
 //const firebase = require('firebase');
 const PORT = 3000
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
+const interact = require('interactjs');
 //const app2 = firebase.initializeApp({ ... });
 
 app.use(bodyParser.json());
