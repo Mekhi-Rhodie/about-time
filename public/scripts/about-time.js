@@ -76,6 +76,11 @@ $(document).ready(function () {
     });
 });
 
+$("#time-difference").draggable().resizable();
+$("#world-clock").draggable().resizable();
+$("#timer").draggable().resizable();
+$("#events").draggable().resizable();
+
 auth.onAuthStateChanged(function(user){
     const eventRef = db.collection("users").doc(user.email);
     eventRef.get().then(function(doc) {
