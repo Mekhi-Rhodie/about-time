@@ -7,7 +7,7 @@ const app = express();
 //const firebase = require('firebase');
 const PORT = 3000
 const bodyParser = require('body-parser');
-const interact = require('interactjs');
+//const interact = require('interactjs');
 //const app2 = firebase.initializeApp({ ... });
 
 app.use(bodyParser.json());
