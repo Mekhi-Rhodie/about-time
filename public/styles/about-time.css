@@ -50,8 +50,6 @@ header {
     margin-left: 25%;
 }
 
-
-
 #navigation {
     grid-area: nav;
     background-image: linear-gradient(to bottom, #161515, #424242);
@@ -115,11 +113,13 @@ select {
 
 input {
     border-radius: 7px;
-    width: 35%;
+    width: 25%;
+    height: 10%;
     padding: 0px;
     border: 1.5px solid #000000;
-    font-size: 25px;
+    font-size: 185%;
     text-align: center;
+    margin: 0px;
 }
 
 #dOutput {
@@ -138,7 +138,7 @@ textarea {
     grid-area: tDifference;
     padding: 2%;
     display: grid;
-    gap: 30px;
+    gap: auto;
     grid-template-columns: repeat(2, auto);
 }
 
@@ -161,7 +161,7 @@ textarea {
 }
 
 .timeDiff{
-    margin-top: 50px;
+    margin: 5px;
     border-radius: 7px;
     padding: 6px;
     border: 1.5px solid #000000;
@@ -170,11 +170,11 @@ textarea {
     background-color: whitesmoke;
     color: black;
     box-shadow: 5.5px 5.5px 3px black;
-    width: 60%;
 }
 
 #diff-output{
     float: right;
+    margin: 0px;
 }
 
 output {
