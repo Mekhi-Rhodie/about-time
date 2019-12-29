@@ -1,8 +1,9 @@
 function valueAppend(unit){
     $("#unit-output").append(unit)
 };
-
-
+/*$("#unitOutput").empty().append("<p class='output'>"+ value + "  " + x + "  " + "=" + "  " +   + "  " + y +"</p>" + 
+            "<br>" + "<p class='output'>" +"Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");*/
+//value * 10
 function millenniumConversion(x, y, value) {
     switch (x === "Millennium") {
         case y === "Millennium":
@@ -10,10 +11,12 @@ function millenniumConversion(x, y, value) {
             break;
         case y === "Century":
             //$("#unitOutput").empty().append("<p class='output'>"+ value + "  " + x + "=" + y +"</p>");
-            $("#unitOutput").empty().append("<p class='output'>"+ value * 10 +"</p>");
+            $("#unitOutput").empty().append("<p class='output'>"+ value + "  " + x + "  " + "=" + "  " + value * 10 + "  " + y +"</p>" + 
+            "<br>" + "<p class='output'>" +"Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Decade":
-            $("#unitOutput").empty().append("<p class='output'>"+ value * 100 +"</p>");
+            $("#unitOutput").empty().append("<p class='output'>"+ value + "  " + x + "  " + "=" + "  " + value * 100 + "  " + y +"</p>" + 
+            "<br>" + "<p class='output'>" +"Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Year":
             $("#unitOutput").empty().append("<p class='output'>"+ value * 1000 +"</p>");
