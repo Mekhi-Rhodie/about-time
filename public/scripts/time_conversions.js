@@ -163,43 +163,44 @@ function yearConversion(x, y, value) {
                 "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Century":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 100 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 100 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Decade":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 10 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 10 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Year":
             $("#unitOutput").empty().append("<p class='output'>" + parseInt(value) + "</p>");
             console.log();
             break;
         case y === "Month":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 12 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 12 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Week":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 52.14 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 52.14 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Day":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 365 + "</p>");
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 365 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Hour":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 8760 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 8760 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Minute":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 525600 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 525600 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Second":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 31536000 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 31536000 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Millisecond":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 31536000000 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 31536000000 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         default:
             console.log("It didn't work");
@@ -208,48 +209,47 @@ function yearConversion(x, y, value) {
 function monthConversion(x, y, value) {
     switch (x === "Month") {
         case y === "Millennium":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 11999.987 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 11999.987 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Century":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 1199.999 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 1199.999 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Decade":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 120 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 120 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Year":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 12 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 12 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Month":
             $("#unitOutput").empty().append("<p class='output'>" + value + "</p>");
-            console.log(value);
             break;
         case y === "Week":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 4.345 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 4.345 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Day":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 30.417 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 30.417 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Hour":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 730.001 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 730.001 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Minute":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 43800.048 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 43800.048 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Second":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 2.628e+6 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 2.628e+6 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Millisecond":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 2.628e+9 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 2.628e+9 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         default:
             console.log("It didn't work");
@@ -259,48 +259,47 @@ function monthConversion(x, y, value) {
 function weekConversion(x, y, value) {
     switch (x === "Week") {
         case y === "Millennium":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 52142.857 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 52142.857 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Century":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 5214.286 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 5214.286 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Decade":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 521.429 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 521.429 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Year":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 52.143 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 52.143 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Month":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 4.345 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 4.345 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Week":
             $("#unitOutput").empty().append("<p class='output'>" + value + "</p>");
-            console.log();
             break;
         case y === "Day":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 7 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 7 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Hour":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 168 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 168 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Minute":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 10080 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 10080 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Second":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 604800 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 604800 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Millisecond":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 6.048e+8 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 6.048e+8 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         default:
             console.log("It didn't work");
@@ -310,48 +309,47 @@ function weekConversion(x, y, value) {
 function dayConversion(x, y, value) {
     switch (x === "Day") {
         case y === "Millennium":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 365000 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 365000 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Century":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 36500 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 36500 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Decade":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 3650 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 3650 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Year":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 365 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 365 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Month":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 30.417 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 30.417 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Week":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 7 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 7 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Day":
             $("#unitOutput").empty().append("<p class='output'>" + value + "</p>");
-            console.log(value);
             break;
         case y === "Hour":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 24 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 24 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Minute":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 1440 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 1440 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Second":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 86400 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 86400 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Millisecond":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 8.64e+7 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 8.64e+7 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         default:
             console.log("It didn't work");
@@ -361,48 +359,47 @@ function dayConversion(x, y, value) {
 function hourConversion(x, y, value) {
     switch (x === "Hour") {
         case y === "Millennium":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 8.76e+6 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 8.76e+6 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Century":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 876000 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 876000 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Decade":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 87600 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 87600 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Year":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 8760 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 8760 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Month":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 730.001 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 730.001 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Week":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 168 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 168 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Day":
-            $("#unitOutput").empty().append("<p class='output'>" + value / 24 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value / 24 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Hour":
             $("#unitOutput").empty().append("<p class='output'>" + value + "</p>");
-            console.log(value);
             break;
         case y === "Minute":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 60 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 60 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Second":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 3600 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 3600 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         case y === "Millisecond":
-            $("#unitOutput").empty().append("<p class='output'>" + value * 3.6e+6 + "</p>");
-            console.log();
+            $("#unitOutput").empty().append("<p class='output'>" + value + "  " + x + "  " + "=" + "  " + value * 3.6e+6 + "  " + y + "</p>" +
+                "<br>" + "<p class='output'>" + "Formula  =" + "   " + value + "  " + "*" + "  " + "10" + "</p>");
             break;
         default:
             console.log("It didn't work");
