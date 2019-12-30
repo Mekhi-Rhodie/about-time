@@ -8,8 +8,13 @@
     height: 100%;
     width: 100%;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(6, minmax(20px, auto));
-    grid-template-areas: "nav header header header header header header header header header" "nav tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference" "nav clock clock clock clock clock clock clock clock clock" "nav timer timer timer timer timer timer timer timer timer" "nav stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch stopwatch" "nav events events events events events events events events events";
+    grid-template-rows: repeat(5, minmax(auto));
+    grid-template-areas: 
+    "header header header header header header header header header header" 
+    "tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference" 
+    "clock clock clock clock clock clock clock clock clock clock" 
+    "timer timer timer timer timer timer timer timer timer timer"  
+    "events events events events events events events events events events";
 }
 
 #header {
