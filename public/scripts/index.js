@@ -74,6 +74,7 @@ $(document).ready(function () {
     $(".close").on("click", function (event) {
         $("#signup-modal, #login-modal").slideUp(700)
     });
+
     $("#login").on("click", function (event) {
         event.preventDefault();
                 loginValidation();
@@ -86,6 +87,7 @@ $(document).ready(function () {
         })
     });
 });
+
 auth.onAuthStateChanged(function (user) {
     if (user) {
         var email = user.email;
@@ -99,6 +101,7 @@ auth.onAuthStateChanged(function (user) {
         console.log("No user is currently signed-in")
     }
 });
+
 $("#log-out").on("click", function (event) {
     firebase.auth().signOut().then(function () {
         console.log("Sign-out successful.")
