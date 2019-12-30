@@ -11,9 +11,10 @@
     grid-template-rows: repeat(5, minmax(auto));
     grid-template-areas: 
     "header header header header header header header header header header" 
+    "holiday holiday holiday holiday holiday holiday holiday holiday holiday holiday"
     "tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference" 
     "clock clock clock clock clock clock clock clock clock clock" 
-    "timer timer timer timer timer timer timer timer timer timer"  
+    "conversion conversion conversion conversion conversion conversion conversion conversion conversion conversion"  
     "events events events events events events events events events events";
 }
 
@@ -64,6 +65,14 @@ header {
     position: sticky;
     top: 0px;
     height: 98.5vh;
+}
+
+#holidays{
+    grid-area: holiday;
+    background-image: linear-gradient(to bottom, #161515, #424242);
+    border: 1px solid#3fffb2;
+    box-shadow: 10px 15px 10px #000000;
+    border-radius: 5px;
 }
 
 ul {
@@ -237,8 +246,8 @@ h2 {
     margin-top: 0px;
 }
 
-#timer {
-    grid-area: timer;
+#conversion {
+    grid-area: conversion;
     padding: 1.5%;
     display: grid;
     gap: 10px;
