@@ -8,7 +8,6 @@
     height: 100%;
     width: 100%;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(5, minmax(auto));
     grid-template-areas: 
     "header header header header header header header header header header" 
     "holiday holiday holiday holiday holiday holiday holiday holiday holiday holiday"
@@ -17,6 +16,7 @@
     "conversion conversion conversion conversion conversion conversion conversion conversion conversion conversion"  
     "events events events events events events events events events events";
 }
+
 
 #header {
     grid-area: header;
@@ -68,11 +68,31 @@ header {
 }
 
 #holidays{
+    display: none;
     grid-area: holiday;
     background-image: linear-gradient(to bottom, #161515, #424242);
     border: 1px solid#3fffb2;
     box-shadow: 10px 15px 10px #000000;
     border-radius: 5px;
+    padding: 10px;
+}
+
+table{
+    background-color: whitesmoke;
+    margin-left: 45%;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 7px silver;
+    padding: 10px;
+    color: black;
+}
+
+tr{
+
+}
+
+th, td{
+    padding: 10px 35px 5px 35px;
+  
 }
 
 ul {
@@ -96,6 +116,7 @@ li {
     box-shadow: 10px 15px 10px #000000;
     color: silver;
     border-radius: 5px;
+    padding: 0px;
 }
 
 .function:hover {
@@ -131,9 +152,11 @@ input {
     height: 10%;
     padding: 0px;
     border: 1.5px solid #000000;
-    font-size: 185%;
     text-align: center;
+    margin: 0px;padding: 0px;
     margin: 0px;
+    width: 50%;
+    font-size: 20px;
 }
 
 #dOutput {
@@ -169,15 +192,13 @@ textarea {
 }
 
 #end-time, #start-time, #event-description, #event-date, #event-time{
-    padding: 0px;
-    margin: 0px;
-    width: 60%;
+    
 }
 
 .timeDiff{
     margin: 5px;
     border-radius: 7px;
-    padding: 6px;
+    padding: 0px;
     border: 1.5px solid #000000;
     font-size: 25px;
     text-align: center;
