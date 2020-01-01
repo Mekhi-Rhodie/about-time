@@ -18,9 +18,9 @@ const cDate = moment().format("YYYY-MM-DD")
 const currentDateTime = cTime + " " + cDate
 console.log(currentDateTime)
 const currentYear = moment().format("YYYY");
-const API = "3823b898fb770d8f661d981e81896a26430fcb70"
+//const API = "3823b898fb770d8f661d981e81896a26430fcb70"
 console.log(currentYear)
-const URL2 = "https://calendarific.com/api/v2/holidays?&api_key="+ API +"&country=US&type=national&year="+ currentYear
+/*const URL2 = "https://calendarific.com/api/v2/holidays?&api_key="+ API +"&country=US&type=national&year="+ currentYear
 $.ajax({
     url: URL2,
     method:"GET"
@@ -29,7 +29,7 @@ for(let i = 0; i < response.response.holidays.length; i++){
     console.log(response.response.holidays[i].name + " " + response.response.holidays[i].date.iso)
 }
 //console.log(response.response)
-});
+});*/
 
 $(document).ready(function () {
     $("#new-time").on("click", function (event) {
@@ -88,12 +88,27 @@ $(document).ready(function () {
             });
         });
     });
+
+    const timeDifference = $("#time-difference").css("position","value".style)
+    console.log(timeDifference)
 });
 
-$("#time-difference").draggable().resizable();
-$("#world-clock").draggable().resizable();
-$("#timer").draggable().resizable();
-$("#events").draggable().resizable();
+$("#time-difference").draggable().resizable({
+minHeight: 245,
+minWidth: 988
+});
+$("#world-clock").draggable().resizable({
+    minHeight: 275,
+    minWidth: 750
+});
+$("#conversion").draggable().resizable({
+    minHeight: 408,
+    minWidth: 500
+});
+$("#events").draggable().resizable({
+    minHeight: 408,
+    minWidth: 900
+});
 
 auth.onAuthStateChanged(function(user){
     const eventRef = db.collection("users").doc(user.email);
