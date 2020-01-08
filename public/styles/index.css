@@ -8,12 +8,11 @@
     height: 100%;
     gap: 30px;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(4, minmax(50px, auto));
+    grid-template-rows: repeat(3, minmax(50px, auto));
     grid-template-areas: 
     "header header header header header header header header header header" 
     "main main main main main main main main main main"
     "section section section section section section section section section section" 
-    "footer footer footer footer footer footer footer footer footer footer";
 }
 
 #header {
