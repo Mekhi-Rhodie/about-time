@@ -10,13 +10,11 @@
     grid-template-columns: repeat(10, 1fr);
     grid-template-areas: 
     "header header header header header header header header header header" 
-    "holiday holiday holiday holiday holiday holiday holiday holiday holiday holiday"
-    "tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference" 
+    "tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference tDifference " 
     "clock clock clock clock clock clock clock clock clock clock" 
     "conversion conversion conversion conversion conversion conversion conversion conversion conversion conversion"  
     "events events events events events events events events events events";
 }
-
 
 #header {
     grid-area: header;
