@@ -28,8 +28,8 @@ $(document).ready(function () {
         const sTime = moment(startTime, "H:mma").format("H:mm ");
         const hourDifference = moment.utc(moment(eTime, "H:mma").diff(moment(sTime, "H:mma"))).format("H");
         const minDifference = moment.utc(moment(eTime, "H:mma").diff(moment(sTime, "H:mma"))).format("m");
-        $("#diff-output").slideDown(900).empty().append("<p class='timeDiff'>" + "<strong>" + "Start Time:" + "</strong>" + "   " + startTime + " " + "<strong>" + "End Time:" + "</strong>" + "   " + endTime + "</p>" + 
-        "<br>" + "<p class='timeDiff'>" + hourDifference + " Hours " + minDifference + " Minutes" + "</p>");
+        $("#diff-output").slideDown(900).empty().append("<p class='timeDiff'>" + "<strong>" + "Start Time:" + "</strong>" + "   " + startTime + " " + "<strong>" + "End Time:" + "</strong>" + "   " + endTime + "</p>" +
+            "<br>" + "<p class='timeDiff'>" + hourDifference + " Hours " + minDifference + " Minutes" + "</p>");
         //"<output class='difference'>" +  + "</output>"
     });
     $("#search-button").on("click", function (event) {
@@ -41,6 +41,7 @@ $(document).ready(function () {
             url: URL,
             method: "GET"
         }).then(function (response) {
+            console.log(response)
             const regionTimeDate = response.zones[0].formatted;
             const regionTime = moment(regionTimeDate).format("h:mm A");
             const regionDate = moment(regionTimeDate).format("MM/DD/YYYY");
@@ -52,10 +53,30 @@ $(document).ready(function () {
             $("#city-state").empty().prepend(cityState);
             $("#region-time").empty().prepend(regionTime);
             $("#date").empty().prepend(regionDate);
-            $("#time-diff").empty().prepend(timeDiff);
+            $("#time-diff").empty().prepend("-" + timeDiff);
             $("#gmt").empty().append("<strong>" + "GMT: " + "</strong>" + gmt);
-            $("#time-zone").empty().prepend("<strong>" + timeZone + "</strong>");
-            //Add switch statement to print out full time zone phrase base on abbreveation.
+            switch (timeZone) {
+                case "MST":
+                    $("#time-zone").empty().prepend("<strong>" + timeZone + "</strong>" + ":  " + "Mountain Standard Time");
+                    break;
+                case "PST":
+                    $("#time-zone").empty().prepend("<strong>" + timeZone + "</strong>" + ":  " + "Pacific Standard Time");
+                    break;
+                case "EST":
+                    $("#time-zone").empty().prepend("<strong>" + timeZone + "</strong>" + ":  " + "Eastern Standard Time");
+                    break;
+                case "CST":
+                    $("#time-zone").empty().prepend("<strong>" + timeZone + "</strong>" + ":  " + "Central Standard Time");
+                    break;
+                case "AKST":
+                    $("#time-zone").empty().prepend("<strong>" + timeZone + "</strong>" + ":  " + "Alaskan Standard Time");
+                    break;
+                case "HST":
+                    $("#time-zone").empty().prepend("<strong>" + timeZone + "</strong>" + ":  " + "Hawaii-ALeutian Standard Time");
+                    break;
+                default:
+                    $("#time-zone").empty().prepend("<strong>" + "WRONG!!!" + "</strong>");
+            }
         });
     });
     auth.onAuthStateChanged(function (user) {
@@ -68,22 +89,21 @@ $(document).ready(function () {
                 event: eventDescrip,
                 eventTime: eventTime + " " + eventDate
             })
-            .then(function () {
-                console.log("Document successfully written!");
-            })
-            .catch(function (error) {
-                console.error("Error writing document: ", error);
-            });
+                .then(function () {
+                    console.log("Document successfully written!");
+                })
+                .catch(function (error) {
+                    console.error("Error writing document: ", error);
+                });
         });
     });
-
-    const timeDifference = $("#time-difference").css("position","value".style)
+    const timeDifference = $("#time-difference").css("position", "value".style)
     console.log(timeDifference)
 });
 
 $("#time-difference").draggable().resizable({
-minHeight: 245,
-minWidth: 988
+    minHeight: 245,
+    minWidth: 988
 });
 $("#world-clock").draggable().resizable({
     minHeight: 275,
@@ -98,12 +118,12 @@ $("#events").draggable().resizable({
     minWidth: 900
 });
 
-auth.onAuthStateChanged(function(user){
+auth.onAuthStateChanged(function (user) {
     const eventRef = db.collection("users").doc(user.email);
-    eventRef.get().then(function(doc) {
+    eventRef.get().then(function (doc) {
         const event = doc.data().event;
         const eventDataTime = doc.data().eventTime;
-        const message = "Sorry, you currently have no events scheduled for today." 
+        const message = "Sorry, you currently have no events scheduled for today."
         if (doc.exists) {
             console.log(event);
             console.log(eventDataTime)
@@ -111,13 +131,13 @@ auth.onAuthStateChanged(function(user){
             // doc.data() will be undefined in this case
             console.log("No such document!");
         }
-        if(eventDataTime === currentDateTime){
+        if (eventDataTime === currentDateTime) {
             $("#event-output").append("<output class='output'>" + event + "</output>")
             $("#event-output").append("<output class='output'>" + eventDataTime + "</output>")
-        }else{//(eventDataTime !== currentDateTime){
+        } else {//(eventDataTime !== currentDateTime){
             $("#event-output").append("<p class='output'>" + message + "</p>")
         }
-    }).catch(function(error) {
+    }).catch(function (error) {
         console.log("Error getting document:", error);
     });
 });
