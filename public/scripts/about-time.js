@@ -103,19 +103,19 @@ $(document).ready(function () {
 
 $("#time-difference").draggable().resizable({
     minHeight: 245,
-    minWidth: 988
+    minWidth: 710
 });
 $("#world-clock").draggable().resizable({
     minHeight: 275,
-    minWidth: 750
+    minWidth: 710
 });
 $("#conversion").draggable().resizable({
     minHeight: 408,
-    minWidth: 500
+    minWidth: 480
 });
 $("#events").draggable().resizable({
     minHeight: 408,
-    minWidth: 900
+    minWidth: 890
 });
 
 auth.onAuthStateChanged(function (user) {
@@ -132,7 +132,7 @@ auth.onAuthStateChanged(function (user) {
             console.log("No such document!");
         }
         if (eventDataTime === currentDateTime) {
-            $("#event-output").append("<output class='output'>" + event + "</output>")
+            $("#event-output").append("<output class='output'>" + event + "</output>" + "<br>")
             $("#event-output").append("<output class='output'>" + eventDataTime + "</output>")
         } else {//(eventDataTime !== currentDateTime){
             $("#event-output").append("<p class='output'>" + message + "</p>")
