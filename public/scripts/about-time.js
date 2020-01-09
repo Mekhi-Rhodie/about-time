@@ -36,7 +36,7 @@ $(document).ready(function () {
         event.preventDefault()
         const search = $("#clock-search").val().trim();
         const region = $("#region-input").val()
-        const URL = "http://vip.timezonedb.com/v2.1/get-time-zone?key=SGF912W64G0B&format=json&by=city&city=" + search + "&region=" + region + "&country=US"
+        const URL = "https://vip.timezonedb.com/v2.1/get-time-zone?key=SGF912W64G0B&format=json&by=city&city=" + search + "&region=" + region + "&country=US"
         $.ajax({
             url: URL,
             method: "GET"
