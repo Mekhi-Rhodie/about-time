@@ -35,6 +35,10 @@ header {
     margin-left: 10px;
 }
 
+h1{
+    color: silver;
+}
+
 #header-title {
     grid-column: 2/3;
     text-align: center;
