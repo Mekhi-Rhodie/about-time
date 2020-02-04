@@ -6,7 +6,7 @@ About time is a web app that helps users better calculate time in an easy and qu
 ## Getting Started
 1. Clone repo to yuor machine
 2. In your command line, install nesscesary packages using the commmand npm install
-3. Once all packages have been installed run the server.js file in your command line navigate to   in your bowser
+3. Once all packages have been installed run the server.js file in your command line navigate to http://localhost:3000/ in your browser
 
 
 ### Prerequisites
