@@ -20,8 +20,26 @@ About time is a web app that helps users better calculate time in an easy and qu
 
 
 ## How to use app
+About-Time has only for main functions
+- Time Difference Calculator
+- U.S. Time Zone Search
+- Time Unit Conversion
+- Reminder
 
+### Time Difference Calculator
+1. Input start time 
+2. Input end Time
+3. Press "Enter" button
 
+How much time from the start time to the end time is then displayed next to the time input forms.
+
+### U.S. Time Zone 
+1. Input desired city and it's state code
+2. Press "Search" button
+
+Once the search button is pressed the region time, region date, gmt offset, and time difference of the the searched city is displayed below the search form.
+
+### Unit Conversion
 
 ## Demo
 [https://about-time1.herokuapp.com/]
