@@ -53,6 +53,6 @@ About-Time has only for main functions
 - Once you submit the event, it will be displayed at the designated time and date.
 
 ## Demo
-![Alt text](/images/img.jpg?raw=true "Optional Title")
+![Alt text](/images/about-time.png?raw=true "Optional Title")
 [https://about-time1.herokuapp.com/]
 https://wireframe.cc/mQSxVF
